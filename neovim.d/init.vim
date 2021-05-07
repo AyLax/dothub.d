@@ -4,3 +4,6 @@
 " Author: AyLax.Zhou < zhoubye@foxmail.com >
 " License: GPLv3
 "=============================================================================
+
+runtime base.vim
+runtime plugin.vim
