@@ -12,7 +12,23 @@
 " :PlugClean     # Exec for clean after delete plugin
 call plug#begin('~/.config/nvim/plugins')
 
-" Rust
+
+"" Rust
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 
+"" NERDTree
+Plug 'preservim/nerdtree'
+
+
 call plug#end()
+
+
+" Configuration
+
+"" NERDTree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
