@@ -1,5 +1,5 @@
 "=============================================================================
-" init.vim --- Entry
+" plugin.vim --- Hub
 " Copyright (c) 2021-20xx AyLax.Zhou
 " Author: AyLax.Zhou < zhoubye@foxmail.com >
 " License: GPLv3
