@@ -25,8 +25,8 @@ set encoding=utf8
 set syntax=on
 set tabstop=4
 set backspace=2
-set ruler          " Open status bar ruler
-set cursorline     " Highlight the current line
-set number         " Show line number
-set showmatch      " Highlight matched brackets
-set matchtime=1    " Brackets highlight residence time
+set ruler                         " Open status bar ruler
+set cursorline                    " Highlight the current line
+set number                        " Show line number
+set showmatch                     " Highlight matched brackets
+set matchtime=1                   " Brackets highlight residence time
