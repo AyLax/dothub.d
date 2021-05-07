@@ -12,4 +12,7 @@
 " :PlugClean     # Exec for clean after delete plugin
 call plug#begin('~/.config/nvim/plugins')
 
+" Rust
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+
 call plug#end()
