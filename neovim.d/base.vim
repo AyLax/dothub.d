@@ -23,8 +23,10 @@ set encoding=utf8
 
 " Sets plain text format
 set syntax=on                     " Syntax on
-set noexpandtab                   " Do not replace <tab> as <space>
+set expandtab                     " Replace <tab> as <space>
+set shiftwidth=4                  " Indent width
 set tabstop=4                     " Display tab width
+set softtabstop=4                 " Tune tab on vim insert mode
 set backspace=2                   " Backspace with
 set ruler                         " Open status bar ruler
 set cursorline                    " Highlight the current line
