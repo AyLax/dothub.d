@@ -22,9 +22,10 @@ let mapleader = ";"
 set encoding=utf8
 
 " Sets plain text format
-set syntax=on
-set tabstop=4
-set backspace=2
+set syntax=on                     " Syntax on
+set noexpandtab                   " Do not replace <tab> as <space>
+set tabstop=4                     " Display tab width
+set backspace=2                   " Backspace with
 set ruler                         " Open status bar ruler
 set cursorline                    " Highlight the current line
 set number                        " Show line number
