@@ -19,6 +19,8 @@ Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 "" NERDTree
 Plug 'preservim/nerdtree'
 
+"" Snippets
+Plug 'SirVer/ultisnips'
 
 call plug#end()
 
@@ -33,3 +35,10 @@ nnoremap <C-f> :NERDTreeFind<CR>
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let NERDTreeShowHidden=1
+
+"" Snippets
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "snippets.d"]
+
