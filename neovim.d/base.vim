@@ -30,7 +30,7 @@ set cursorline                    " Highlight the current line
 set number                        " Show line number
 set showmatch                     " Highlight matched brackets
 set matchtime=1                   " Brackets highlight residence time
-()
+
 " Sets status line
 set laststatus=2
 hi User1 cterm=none ctermfg=120 ctermbg=0 
