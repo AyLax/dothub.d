@@ -40,7 +40,7 @@ hi User4 cterm=none ctermfg=100 ctermbg=0
 hi User5 cterm=none ctermfg=120 ctermbg=0
 let sheader1 = "%1*\ %<%.50F %= \%*"
 let smarker1 = "%2*\ %y%m%r%h%w \%*"
-let smarker2 = "%3*\ %{&ff}\[%{&fenc}] \%*"
+let smarker2 = "%3*\ [%{&ff}][%{&fenc}] \%*"
 let sfooter1 = "%4*\ (%l, %c) \%*"
 let sfooter2 = "%5*\ %3p%% \%*"
 let sheadera = sheader1
