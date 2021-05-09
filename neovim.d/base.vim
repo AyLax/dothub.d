@@ -30,11 +30,22 @@ set cursorline                    " Highlight the current line
 set number                        " Show line number
 set showmatch                     " Highlight matched brackets
 set matchtime=1                   " Brackets highlight residence time
-
+()
 " Sets status line
-let sheader = "%1*\%<%.50F"
-let smarker = "%=%2*\%y%m%r%h%w\ %*%3*\%{&ff}\[%{&fenc}]\ %*"
-let sfooter = "%4*\ (%l, %c) %*%5*\%3p%%\%*"
-let sformat = sheader.smarker.sfooter
-set statusline=%!sformat
 set laststatus=2
+hi User1 cterm=none ctermfg=120 ctermbg=0 
+hi User2 cterm=none ctermfg=208 ctermbg=0
+hi User3 cterm=none ctermfg=169 ctermbg=0
+hi User4 cterm=none ctermfg=100 ctermbg=0
+hi User5 cterm=none ctermfg=120 ctermbg=0
+let sheader1 = "%1*\ %<%.50F %= \%*"
+let smarker1 = "%2*\ %y%m%r%h%w \%*"
+let smarker2 = "%3*\ %{&ff}\[%{&fenc}] \%*"
+let sfooter1 = "%4*\ (%l, %c) \%*"
+let sfooter2 = "%5*\ %3p%% \%*"
+let sheadera = sheader1
+let smarkera = smarker1.smarker2
+let sfootera = sfooter1.sfooter2
+let sformata = sheadera.smarkera.sfootera
+set statusline=%!sformata
+
