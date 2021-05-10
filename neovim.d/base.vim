@@ -5,6 +5,12 @@
 " License: GPLv3
 "=============================================================================
 
+" Sets no backup
+set nobackup       " no backup files
+set noswapfile     " no swap files
+set nowritebackup  " no write backup file
+set noundofile     " no undo files
+
 " Sets disable vi mode
 set nocompatible
 
