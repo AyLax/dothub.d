@@ -1,4 +1,17 @@
-# rust.snippets
+# ===============================================
+# rust.snippets --- Snippets for Rust 
+# Author: AyLax.Zhou < zhoubye@foxmail.com >
+# Copyright (c) 2021-20xx AyLax.Zhou
+# License: GPLv3
+# ===============================================
+
+
+snippet struct "struct"
+#[derive(Debug${1})]
+struct ${2:name} {
+    ${0}
+}
+endsnippet
 
 snippet fn "fn"
 fn ${1:name}(${2})${3} {
@@ -10,14 +23,6 @@ snippet main "main"
 fn main() {
     ${0}
 }
-endsnippet
-
-snippet let "let"
-let ${1}: ${2} = ${3};
-endsnippet
-
-snippet letmut "let mut"
-let mut ${1}: ${2} = ${3};
 endsnippet
 
 snippet for "for"
