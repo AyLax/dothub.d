@@ -20,7 +20,7 @@ endif
 
 set background=dark
 
-let g:colors_name='skeletor'
+let g:colors_name='aylaxer'
 
 if !exists("g:no_bg")
 	let g:no_bg = 0
@@ -29,44 +29,44 @@ endif
 
 
 " Color Palette: {{{
-let s:skeletor = {}
+let s:aylaxer = {}
 " ----------------------------------------------|-----RGB-----|------HSL-------|
-let s:skeletor.white         = ['#fdf6e3', 230] " 253 246 227 |  44°  87% 100% |
-let s:skeletor.lightblue     = ['#dce7fd', 189] " 220 231 253 | 220°  89%  93% |
-let s:skeletor.yellow        = ['#f3e4a2', 229] " 243 228 162 |  49°  77%  79% |
-let s:skeletor.orange        = ['#ffb793', 216] " 255 183 147 |  20° 100%  79% |
-let s:skeletor.red           = ['#f36a66', 203] " 243 106 102 |   2°  85%  68% |
-let s:skeletor.orchid        = ['#ff8adb', 213] " 255 138 219 | 318° 100%  77% |
-let s:skeletor.purple        = ['#bd93f9', 141] " 189 147 249 | 265°  89%  78% |
-let s:skeletor.blue          = ['#93b4ff', 75]  " 147 180 255 | 222° 100%  79% |
-let s:skeletor.bluegray      = ['#7b94a5', 103] " 123 148 165 | 204°  19%  56% |
-let s:skeletor.green         = ['#84fba2', 121] " 132 251 16  | 135°  94%  75% |
-let s:skeletor.verylightgray = ['#c5c8c6', 251] " 197 200 198 | 140°   3%  78% |
-let s:skeletor.background    = ['#2b2836', 236] "  43 40 54   | 253°  15%  18% |
-let s:skeletor.comments      = ['#655e7f', 60]  " 101 94 127  | 253°  15%  43% |
-let s:skeletor.cursor		 = ['#423e53', 239] "  66 62 83   | 251°  14%  28% |
-let s:skeletor.cursor2		 = ['#383546', 237] "  56 53 70   | 251°  14%  24% |
+let s:aylaxer.white         = ['#fdf6e3', 230] " 253 246 227 |  44°  87% 100% |
+let s:aylaxer.lightblue     = ['#dce7fd', 189] " 220 231 253 | 220°  89%  93% |
+let s:aylaxer.yellow        = ['#f3e4a2', 229] " 243 228 162 |  49°  77%  79% |
+let s:aylaxer.orange        = ['#ffb793', 216] " 255 183 147 |  20° 100%  79% |
+let s:aylaxer.red           = ['#f36a66', 203] " 243 106 102 |   2°  85%  68% |
+let s:aylaxer.orchid        = ['#ff8adb', 213] " 255 138 219 | 318° 100%  77% |
+let s:aylaxer.purple        = ['#bd93f9', 141] " 189 147 249 | 265°  89%  78% |
+let s:aylaxer.blue          = ['#93b4ff', 75]  " 147 180 255 | 222° 100%  79% |
+let s:aylaxer.bluegray      = ['#7b94a5', 103] " 123 148 165 | 204°  19%  56% |
+let s:aylaxer.green         = ['#84fba2', 121] " 132 251 16  | 135°  94%  75% |
+let s:aylaxer.verylightgray = ['#c5c8c6', 251] " 197 200 198 | 140°   3%  78% |
+let s:aylaxer.background    = ['#2b2836', 236] "  43 40 54   | 253°  15%  18% |
+let s:aylaxer.comments      = ['#655e7f', 60]  " 101 94 127  | 253°  15%  43% |
+let s:aylaxer.cursor		 = ['#423e53', 239] "  66 62 83   | 251°  14%  28% |
+let s:aylaxer.cursor2		 = ['#383546', 237] "  56 53 70   | 251°  14%  24% |
 
-let s:white = s:skeletor.white
-let s:yellow = s:skeletor.yellow
-let s:orange = s:skeletor.orange
-let s:red = s:skeletor.red
-let s:pink = s:skeletor.orchid
-let s:purple = s:skeletor.purple
-let s:blue = s:skeletor.blue
-let s:bluegray = s:skeletor.bluegray
-let s:green = s:skeletor.green
-let s:vlgray = s:skeletor.verylightgray
-let s:fg1 = s:skeletor.comments
-let s:fg0 = s:skeletor.lightblue
+let s:white = s:aylaxer.white
+let s:yellow = s:aylaxer.yellow
+let s:orange = s:aylaxer.orange
+let s:red = s:aylaxer.red
+let s:pink = s:aylaxer.orchid
+let s:purple = s:aylaxer.purple
+let s:blue = s:aylaxer.blue
+let s:bluegray = s:aylaxer.bluegray
+let s:green = s:aylaxer.green
+let s:vlgray = s:aylaxer.verylightgray
+let s:fg1 = s:aylaxer.comments
+let s:fg0 = s:aylaxer.lightblue
 if g:no_bg == 0
-	let s:bg = s:skeletor.background
+	let s:bg = s:aylaxer.background
 else
 	let s:bg = ['NONE', 'NONE']
 endif
-let s:bg = s:skeletor.background
-let s:c = s:skeletor.cursor
-let s:c2 = s:skeletor.cursor2
+let s:bg = s:aylaxer.background
+let s:c = s:aylaxer.cursor
+let s:c2 = s:aylaxer.cursor2
 " }}}
 
 
