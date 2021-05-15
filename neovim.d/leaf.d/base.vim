@@ -42,11 +42,6 @@ set matchtime=1                   " Brackets highlight residence time
 
 " Sets status line
 set laststatus=2
-hi User1 cterm=none ctermfg=120 ctermbg=0 
-hi User2 cterm=none ctermfg=208 ctermbg=0
-hi User3 cterm=none ctermfg=169 ctermbg=0
-hi User4 cterm=none ctermfg=100 ctermbg=0
-hi User5 cterm=none ctermfg=120 ctermbg=0
 let sheader1 = "%1*\ %<%.50F %= \%*"
 let smarker1 = "%2*\ %y%m%r%h%w \%*"
 let smarker2 = "%3*\ [%{&ff}][%{&fenc}] \%*"

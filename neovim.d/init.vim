@@ -5,6 +5,9 @@
 " License: GPLv3
 "=============================================================================
 
-runtime base.vim
-runtime plugin.vim
+" Load leaf.d/custom*.vim
+runtime leaf.d/base.vim
+runtime leaf.d/plugin.vim
 
+" Select color scheme
+colorscheme aylaxer 
