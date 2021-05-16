@@ -52,3 +52,9 @@ let sfootera = sfooter1.sfooter2
 let sformata = sheadera.smarkera.sfootera
 set statusline=%!sformata
 
+hi! link User1 Underlined
+hi! link User2 Statement
+hi! link User3 Title
+hi! link User4 Constant
+hi! link User5 Statement
+
