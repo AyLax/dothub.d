@@ -64,3 +64,4 @@ grub-install  --no-floppy --target=i386-pc --force --recheck --debug /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 exit
 umount /mnt/{boot,home,}
+reboot
