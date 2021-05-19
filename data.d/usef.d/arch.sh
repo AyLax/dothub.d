@@ -71,13 +71,8 @@ reboot
 # ==================== config ====================== #
 
 # 1.step: wifi
-systemctl enable systemd-resolved.service
-systemctl start systemd-resolved.service
-systemctl enable dhcpcd.service
-systemctl start dhcpcd.service
-systemctl start iwd.service
-systemctl enable iwd.service
-
+systemctl enable systemd-resolved dhcpcd iwd
+systemctl start systemd-resolved dhcpcd iwd
 
 # 2.step: zone & host
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
