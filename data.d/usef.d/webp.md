@@ -2,4 +2,4 @@
 
 
 ## Emacs
-[diy myself emacs color-theme](https://emacsfodder.github.io/emacs-theme-editor/)
+[diy emacs color-theme](https://emacsfodder.github.io/emacs-theme-editor/)
