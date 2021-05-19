@@ -44,7 +44,7 @@ mkdir /mnt/home
 mount /dev/sda3 /mnt/home
 
 # 6.step: install system
-pacstrap /mnt base linux linux-firmware vim
+pacstrap /mnt base base-devel dhcpcd linux linux-firmware vim
 
 # 7.step: gen partition table
 genfstab -U /mnt >> /mnt/etc/fstab
@@ -58,6 +58,7 @@ echo "LANG=en_US.UTF-8" > /etc/locale.conf
 export LANG=en_US.UTF-8
 echo arch > /etc/hostname
 passwd # set password
+pacman -S iwd dialog netctl
 
 # 9.step save grub
 pacman -S grub
@@ -68,6 +69,17 @@ umount /mnt/{boot,home,}
 reboot
 
 # ==================== config ====================== #
+
+# 1.step: wifi
+systemctl enable systemd-resolved.service
+systemctl start systemd-resolved.service
+systemctl enable dhcpcd.service
+systemctl start dhcpcd.service
+systemctl start iwd.service
+systemctl enable iwd.service
+
+
+# 2.step: zone & host
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 hwclock --systohc
 vim /etc/hosts
@@ -75,7 +87,7 @@ vim /etc/hosts
 # ::1 localhost
 # 127.0.1.1 arch.localdomain arch
 
-# add group/user
+# 3.step: add group/user
 groupadd －g 1248 stargazer
 useradd -m -g stargazer -G wheel -s /bin/bash -d /home/aylax aylax
 passwd aylax
