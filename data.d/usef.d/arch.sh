@@ -49,4 +49,18 @@ pacstrap /mnt base linux linux-firmware vim
 genfstab -U /mnt >> /mnt/etc/fstab
 
 
+# 8.step: switch inner system
 arch-chroot /mnt
+echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+locale-gen
+echo "LANG=en_US.UTF-8" > /etc/locale.conf
+export LANG=en_US.UTF-8
+echo arch > /etc/hostname
+passwd # set password
+
+# 9.step save grub
+pacman -S grub
+grub-install  --no-floppy --target=i386-pc --force --recheck --debug /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
+exit
+umount /mnt/{boot,home,}
