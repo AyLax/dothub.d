@@ -1,4 +1,5 @@
 #!/bin/sh
+# Git's World line Beam
 # Relink old commits user.name && user.email to news
 # Warning!! This will destroy your team git commit history
 ## Steps below:
