@@ -58,7 +58,7 @@ echo "LANG=en_US.UTF-8" > /etc/locale.conf
 export LANG=en_US.UTF-8
 echo arch > /etc/hostname
 passwd # set password
-pacman -S iwd dialog netctl
+pacman -S iwd dialog netctl sudo
 
 # 9.step save grub
 pacman -S grub
@@ -86,5 +86,6 @@ vim /etc/hosts
 groupadd －g 1248 stargazer
 useradd -m -g stargazer -G wheel -s /bin/bash -d /home/aylax aylax
 passwd aylax
+echo "aylax ALL=(ALL) ALL" >> /etc/sudoers
 
 
