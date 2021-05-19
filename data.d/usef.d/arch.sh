@@ -2,6 +2,7 @@
 
 # Only for ArchLinux-5.11.16+ [BIOS]
 
+# ========================= install ========================== #
 ## 1.step: check boot way
 # check boot: if dictionary exists; then efi else maybe bios
 ls /sys/firmware/efi/efivars
@@ -65,3 +66,18 @@ grub-mkconfig -o /boot/grub/grub.cfg
 exit
 umount /mnt/{boot,home,}
 reboot
+
+# ==================== config ====================== #
+ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+hwclock --systohc
+vim /etc/hosts
+# 127.0.0.1 localhost
+# ::1 localhost
+# 127.0.1.1 arch.localdomain arch
+
+# add group/user
+groupadd －g 1248 stargazer
+useradd -m -g stargazer -G wheel -s /bin/bash -d /home/aylax aylax
+passwd aylax
+
+
