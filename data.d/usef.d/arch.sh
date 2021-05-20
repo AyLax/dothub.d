@@ -94,3 +94,18 @@ passwd aylax
 echo "aylax ALL=(ALL) ALL" >> /etc/sudoers
 
 
+
+# ==================== config ====================== #
+# fix if wlan0 not found && echo is BCM43142 802.11b/g/n (rev 0)
+lspci -k | grep -A 2 -i network
+# {{{ if it is above then do
+vim /etc/pacman.conf
+# [archlinuxcn]
+# Server=http://repo.archlinuxcn.org/$arch
+pacman -Syy
+pacman -S archlinuxcn-keyring
+pacman -S yaourt linux-headers
+yaourt -S broadcom-wl-dkms
+reboot
+# }}}
+
