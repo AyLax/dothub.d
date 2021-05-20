@@ -63,7 +63,7 @@ echo "LANG=en_US.UTF-8" > /etc/locale.conf
 export LANG=en_US.UTF-8
 echo arch > /etc/hostname
 passwd # set password
-pacman -S iwd dialog netctl sudo
+pacman -S iwd dialog netctl sudo vim
 
 # 9.step save grub
 pacman -S grub
@@ -82,7 +82,7 @@ systemctl start systemd-resolved dhcpcd iwd
 # 2.step: zone & host
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 hwclock --systohc
-vi /etc/hosts
+vim /etc/hosts
 # 127.0.0.1 localhost
 # ::1 localhost
 # 127.0.1.1 arch.localdomain arch
