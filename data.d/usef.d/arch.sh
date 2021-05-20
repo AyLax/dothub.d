@@ -43,6 +43,11 @@ mount /dev/sda1 /mnt/boot
 mkdir /mnt/home
 mount /dev/sda3 /mnt/home
 
+# if ramdisk less than 4G maybe need it
+# /dev/sda4   4G     Linux swap
+# mkswap /dev/sda4
+# swapon /dev/sda4
+
 # 6.step: install system
 pacstrap /mnt base base-devel dhcpcd linux linux-firmware vim
 
