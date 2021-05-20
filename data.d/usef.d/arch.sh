@@ -49,7 +49,7 @@ mount /dev/sda3 /mnt/home
 # swapon /dev/sda4
 
 # 6.step: install system
-pacstrap /mnt base base-devel dhcpcd linux linux-firmware vim
+pacstrap /mnt base base-devel dhcpcd linux linux-firmware
 
 # 7.step: gen partition table
 genfstab -U /mnt >> /mnt/etc/fstab
@@ -82,7 +82,7 @@ systemctl start systemd-resolved dhcpcd iwd
 # 2.step: zone & host
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 hwclock --systohc
-vim /etc/hosts
+vi /etc/hosts
 # 127.0.0.1 localhost
 # ::1 localhost
 # 127.0.1.1 arch.localdomain arch
