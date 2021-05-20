@@ -1,0 +1,28 @@
+.
+├── .proj
+├── LICENSE
+├── README.md
+├── data.d/
+│   ├── font.d/
+│   │   └── Monaco.ttf
+│   └── usef.d/
+│       ├── arch.sh
+│       ├── webp.md
+│       └── wlb-git.sh
+├── neovim.d/
+│   ├── autoload/
+│   │   ├── .gitkeep
+│   │   └── plug.vim
+│   ├── colors/
+│   │   └── stargazer.vim
+│   ├── init.vim
+│   ├── install.sh
+│   ├── leaf.d/
+│   │   ├── base.vim
+│   │   └── plugin.vim
+│   └── snippets.d/
+│       ├── all.snippets
+│       └── rust.snippets
+└── proj.gen
+
+8 directories, 17 files
