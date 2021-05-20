@@ -116,7 +116,8 @@ pacman -S xf86-video-intel # if is intel
 # }}}
 
 pacman -S xorg-server xorg-xinit
-pacman -S i3-gaps rofi ranger urxvt
+pacman -S i3-gaps rofi ranger rxvt-unicode
+pacman -S adobe-source-code-pro-fonts
 cp /etc/X11/xinit/xinitrc ~/.xinitrc
 vim ~/.xinitrc # do: comment Line: twn& to Line exec xterm ...
 # exec i3
