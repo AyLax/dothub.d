@@ -9,4 +9,4 @@ runtime leaf.d/base.vim
 runtime leaf.d/plugin.vim
 
 " Select color scheme
-colorscheme aylaxer 
+colorscheme stargazer 

@@ -1,5 +1,5 @@
 "=============================================================================
-" aylaxer.vim --- Color 
+" stargazer.vim --- Color 
 " Copyright (c) 2021-20xx AyLax.Zhou
 " Author: AyLax.Zhou <zhoubye@foxmail.com>
 "=============================================================================
@@ -19,7 +19,7 @@ endif
 
 set background=dark
 
-let g:colors_name='aylaxer'
+let g:colors_name='stargazer'
 
 if !exists("g:no_bg")
 	let g:no_bg = 0
@@ -28,44 +28,44 @@ endif
 
 
 " Color Palette: {{{
-let s:aylaxer = {}
+let s:stargazer = {}
 " ----------------------------------------------|-----RGB-----|------HSL-------|
-let s:aylaxer.white         = ['#fdf6e3', 230] " 253 246 227 |  44°  87% 100% |
-let s:aylaxer.lightblue     = ['#dce7fd', 189] " 220 231 253 | 220°  89%  93% |
-let s:aylaxer.yellow        = ['#f3e4a2', 229] " 243 228 162 |  49°  77%  79% |
-let s:aylaxer.orange        = ['#ffb793', 216] " 255 183 147 |  20° 100%  79% |
-let s:aylaxer.red           = ['#f36a66', 203] " 243 106 102 |   2°  85%  68% |
-let s:aylaxer.orchid        = ['#ff8adb', 213] " 255 138 219 | 318° 100%  77% |
-let s:aylaxer.purple        = ['#bd93f9', 141] " 189 147 249 | 265°  89%  78% |
-let s:aylaxer.blue          = ['#93b4ff', 75]  " 147 180 255 | 222° 100%  79% |
-let s:aylaxer.bluegray      = ['#7b94a5', 103] " 123 148 165 | 204°  19%  56% |
-let s:aylaxer.green         = ['#84fba2', 121] " 132 251 16  | 135°  94%  75% |
-let s:aylaxer.verylightgray = ['#c5c8c6', 251] " 197 200 198 | 140°   3%  78% |
-let s:aylaxer.background    = ['#2b2836', 236] "  43 40 54   | 253°  15%  18% |
-let s:aylaxer.comments      = ['#655e7f', 60]  " 101 94 127  | 253°  15%  43% |
-let s:aylaxer.cursor		 = ['#423e53', 239] "  66 62 83   | 251°  14%  28% |
-let s:aylaxer.cursor2		 = ['#383546', 237] "  56 53 70   | 251°  14%  24% |
+let s:stargazer.white         = ['#fdf6e3', 230] " 253 246 227 |  44°  87% 100% |
+let s:stargazer.lightblue     = ['#dce7fd', 189] " 220 231 253 | 220°  89%  93% |
+let s:stargazer.yellow        = ['#f3e4a2', 229] " 243 228 162 |  49°  77%  79% |
+let s:stargazer.orange        = ['#ffb793', 216] " 255 183 147 |  20° 100%  79% |
+let s:stargazer.red           = ['#f36a66', 203] " 243 106 102 |   2°  85%  68% |
+let s:stargazer.orchid        = ['#ff8adb', 213] " 255 138 219 | 318° 100%  77% |
+let s:stargazer.purple        = ['#bd93f9', 141] " 189 147 249 | 265°  89%  78% |
+let s:stargazer.blue          = ['#93b4ff', 75]  " 147 180 255 | 222° 100%  79% |
+let s:stargazer.bluegray      = ['#7b94a5', 103] " 123 148 165 | 204°  19%  56% |
+let s:stargazer.green         = ['#84fba2', 121] " 132 251 16  | 135°  94%  75% |
+let s:stargazer.verylightgray = ['#c5c8c6', 251] " 197 200 198 | 140°   3%  78% |
+let s:stargazer.background    = ['#2b2836', 236] "  43 40 54   | 253°  15%  18% |
+let s:stargazer.comments      = ['#655e7f', 60]  " 101 94 127  | 253°  15%  43% |
+let s:stargazer.cursor		 = ['#423e53', 239] "  66 62 83   | 251°  14%  28% |
+let s:stargazer.cursor2		 = ['#383546', 237] "  56 53 70   | 251°  14%  24% |
 
-let s:white = s:aylaxer.white
-let s:yellow = s:aylaxer.yellow
-let s:orange = s:aylaxer.orange
-let s:red = s:aylaxer.red
-let s:pink = s:aylaxer.orchid
-let s:purple = s:aylaxer.purple
-let s:blue = s:aylaxer.blue
-let s:bluegray = s:aylaxer.bluegray
-let s:green = s:aylaxer.green
-let s:vlgray = s:aylaxer.verylightgray
-let s:fg1 = s:aylaxer.comments
-let s:fg0 = s:aylaxer.lightblue
+let s:white = s:stargazer.white
+let s:yellow = s:stargazer.yellow
+let s:orange = s:stargazer.orange
+let s:red = s:stargazer.red
+let s:pink = s:stargazer.orchid
+let s:purple = s:stargazer.purple
+let s:blue = s:stargazer.blue
+let s:bluegray = s:stargazer.bluegray
+let s:green = s:stargazer.green
+let s:vlgray = s:stargazer.verylightgray
+let s:fg1 = s:stargazer.comments
+let s:fg0 = s:stargazer.lightblue
 if g:no_bg == 0
-	let s:bg = s:aylaxer.background
+	let s:bg = s:stargazer.background
 else
 	let s:bg = ['NONE', 'NONE']
 endif
-let s:bg = s:aylaxer.background
-let s:c = s:aylaxer.cursor
-let s:c2 = s:aylaxer.cursor2
+let s:bg = s:stargazer.background
+let s:c = s:stargazer.cursor
+let s:c2 = s:stargazer.cursor2
 " }}}
 
 
