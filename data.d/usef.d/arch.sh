@@ -95,7 +95,7 @@ echo "aylax ALL=(ALL) ALL" >> /etc/sudoers
 
 
 
-# ==================== config ====================== #
+# ==================== driver ====================== #
 # fix if wlan0 not found && echo is BCM43142 802.11b/g/n (rev 0)
 lspci -k | grep -A 2 -i network
 # {{{ if it is above then do
@@ -108,4 +108,19 @@ pacman -S yaourt linux-headers
 yaourt -S broadcom-wl-dkms
 reboot
 # }}}
+
+# ==================== x-window ====================== #
+# {{{ # view card
+lspci  | grep -i vga 
+pacman -S xf86-video-intel # if is intel
+# }}}
+
+pacman -S xorg-server xorg-xinit
+pacman -S i3-gaps rofi ranger
+cp /etc/X11/xinit/xinitrc ~/.xinitrc
+vim ~/.xinitrc # do: comment Line: twn& to Line exec xterm ...
+# exec i3
+startx # to x-window
+
+
 
