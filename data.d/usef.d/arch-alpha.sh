@@ -3,7 +3,7 @@
 # Only for ArchLinux-5.11.16+ [BIOS]
 
 # ========================= install ========================== #
-## 1.step: check boot way
+# 1.step: check boot way
 # check boot: if dictionary exists; then efi else maybe bios
 ls /sys/firmware/efi/efivars
 
@@ -27,23 +27,24 @@ pacman -Syy
 # 5.step: parted disk
 lsblk # info it
 cfdisk /dev/sdx # part sdx
-# [new] -> [type]-> [write]
 # only for reference:
-# disk        size   type
-# /dev/sda1   512M  Boot
+# [new] -> [type]-> [write]
+# disk        size   type             mnt
+# /dev/sda1   512M   Linux filesystem [/boot]
 # /dev/sda2   40G    Linux filesystem [/]
 # /dev/sda3   64G    Linux filesystem [/home]
+
 mkfs.ext2 /dev/sda1
 mkfs.ext4 /dev/sda2
 mkfs.ext4 /dev/sda3
 
 mount /dev/sda2 /mnt
-mkdir /mnt/boot
+mkdir /mnt/{boot,home}
 mount /dev/sda1 /mnt/boot
-mkdir /mnt/home
 mount /dev/sda3 /mnt/home
 
-# if ramdisk less than 4G maybe need it
+# Add swap partition if ramdisk less than 4G
+# disk        size   type             mnt
 # /dev/sda4   4G     Linux swap
 # mkswap /dev/sda4
 # swapon /dev/sda4
@@ -53,7 +54,6 @@ pacstrap /mnt base base-devel dhcpcd linux linux-firmware
 
 # 7.step: gen partition table
 genfstab -U /mnt >> /mnt/etc/fstab
-
 
 # 8.step: switch inner system
 arch-chroot /mnt
@@ -74,11 +74,11 @@ exit
 umount /mnt/{boot,home,}
 reboot
 
-# ==================== config ====================== #
 
+# ==================== config ====================== #
 # 1.step: wifi
 systemctl enable systemd-resolved dhcpcd iwd
-systemctl start systemd-resolved dhcpcd iwd
+systemctl start  systemd-resolved dhcpcd iwd
 
 # 2.step: zone & host
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
@@ -95,11 +95,9 @@ passwd aylax
 echo "aylax ALL=(ALL) ALL" >> /etc/sudoers
 
 
-
 # ==================== driver ====================== #
-# fix if wlan0 not found && echo is BCM43142 802.11b/g/n (rev 0)
+# {{{Fix wlan0 not found & if echo  BCM43142 802.11b/g/n (rev 0)
 lspci -k | grep -A 2 -i network
-# {{{ if it is above then do
 vim /etc/pacman.conf
 # [archlinuxcn]
 # Server=http://repo.archlinuxcn.org/$arch
@@ -111,18 +109,20 @@ reboot
 # }}}
 
 # ==================== x-window ====================== #
-# {{{ # view card
+# {{{ Card
 lspci  | grep -i vga 
-pacman -S xf86-video-intel # if is intel
+pacman -S xf86-video-intel # Intel
 # }}}
 
 pacman -S xorg-server xorg-xinit i3-gaps
 pacman -S firefox rofi ranger rxvt-unicode
 pacman -S adobe-source-code-pro-fonts
 cp /etc/X11/xinit/xinitrc ~/.xinitrc
-vim ~/.xinitrc # do: comment Line: twn& to Line exec xterm ...
+vim ~/.xinitrc 
+## do comment 
+## from :Line twn&
+## to :Line exec xterm...
 # exec i3
 startx # to x-window
-
 
 
