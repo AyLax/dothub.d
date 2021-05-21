@@ -1,8 +1,9 @@
-"=============================================================================
-" plugin.vim --- Hub
+" ===============================================
+" plugin.vim --- Hub 
 " Copyright (c) 2021-20xx AyLax.Zhou
 " Author: AyLax.Zhou <zhoubye@foxmail.com>
-"=============================================================================
+" ===============================================
+
 
 " :PlugStatus    # Exec for show available plugins
 " :PlugInstall   # Exec for install
