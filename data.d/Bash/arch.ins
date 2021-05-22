@@ -128,7 +128,7 @@ mv BCM43142A0-105b-e065.hcd /lib/firmware/brcm/
 # ==================== x-window ====================== #
 # {{{ Card
 lspci  | grep -i vga 
-pacman -S mesa vulkan-intel xf86-video-intel # Intel
+pacman -S mesa xf86-video-intel # Intel
 # }}}
 
 pacman -S xorg-server xorg-xinit i3-gaps
@@ -194,5 +194,17 @@ defaults.ctl.card 1
 
 alsamixer # sound volume control
 # }}}
+
+
+# GPU Support
+pacman -S vulkan-intel vulkan-devel
+sudo vim /etc/X11/xorg.conf.d/20-intel.conf
+# ===============================
+Section "Device"
+    Identifier "Intel Graphics"
+    Driver     "intel"
+    Option     "DRI" "3"
+EndSection
+# ===============================
 
 
