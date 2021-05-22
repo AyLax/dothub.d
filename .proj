@@ -6,6 +6,7 @@
 │   ├── Doc/
 │   │   └── webstar.md
 │   └── Res/
+│       ├── alias.res
 │       └── urxvt.res
 ├── font.d/
 │   ├── install.sh
@@ -38,4 +39,4 @@
 ├── proj.gen
 └── README.md
 
-12 directories, 26 files
+12 directories, 27 files
