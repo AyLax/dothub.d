@@ -188,6 +188,11 @@ bindsym $mod+r mode "resize"
 #
 
 
+# ==================== assign ============================
+assign [class="^Firefox$"] 2
+
+
+
 # i3-gaps
 for_window [class="^.*"] border pixel 0
 gaps inner 3
