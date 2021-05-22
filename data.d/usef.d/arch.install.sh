@@ -84,10 +84,13 @@ systemctl start  systemd-resolved dhcpcd iwd
 # 2.step: zone & host
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 hwclock --systohc
+
 vim /etc/hosts
+# ===============================
 # 127.0.0.1 localhost
 # ::1 localhost
 # 127.0.1.1 arch.localdomain arch
+# ===============================
 
 # 3.step: add group/user
 groupadd -g 1248 stargazer
@@ -99,9 +102,13 @@ echo "aylax ALL=(ALL) ALL" >> /etc/sudoers
 # ==================== driver ====================== #
 # {{{Fix wlan0 not found & if echo  BCM43142 802.11b/g/n (rev 0)
 lspci -k | grep -A 2 -i network
+
 vim /etc/pacman.conf
+# ===============================
 # [archlinuxcn]
 # Server=http://repo.archlinuxcn.org/$arch
+# ===============================
+
 pacman -Syy
 pacman -S archlinuxcn-keyring
 pacman -S yaourt linux-headers
@@ -127,20 +134,52 @@ pacman -S xorg-server xorg-xinit i3-gaps
 pacman -S firefox rofi ranger rxvt-unicode
 pacman -S adobe-source-code-pro-fonts
 cp /etc/X11/xinit/xinitrc ~/.xinitrc
+
 vim ~/.xinitrc 
+# ===============================
 ## do comment 
 ## from :Line twn&
 ## to :Line exec xterm...
 # exec i3
 startx # to x-window
+# ===============================
 
 
 # ==================== aylax ====================== #
 
+# clone aylax-dothub.d && init home context
+pacman -S git wget openssh
+ssh-keygen
+# git confg --global user.email youremail
+# git confg --global user.name yourname
+# copy $HOME/.ssh/id_rsa.pub 
+# to github.com/user/setting/sshkey
+cd $HOME
+git clone git@github.com:AyLax/dothub.d.git
+sh dothub.d/font.d/install.sh
+sh dothub.d/neovim.d/install.sh
+
 # install neovim
-pacman -S wget neovim
+pacman -S neovim
 wget https://bootstrap.pypa.io/get-pip.py
 python get-pip.py && rm get-pip.py
 echo "export PATH=$HOME/.local/bin:$PATH" >> $HOME/.bashrc
 pip install pynvim
+
+# install urxvt
+pacman -S urxvt
+
+vim $HOME/.Xresources
+# ===============================
+# URxvt.scrollBar:False
+# URxvt.inheritPixmap:true
+# URxvt.background:#000000
+# URxvt.foreground:#ffffff
+# URxvt.borderLess:False
+# Xft.dpi:96
+# URxvt.font:xft:Monaco:antialias=True:pixelsize=16,xft:PingFangSC-Regular:antialias=True:pixelsize=16
+# URxvt.boldfont:xft:Monaco:antialias=True:pixelsize=16,xft:PingFangSC-Regular:antialias=True:pixelsize=16
+# ===============================
+
+
 
