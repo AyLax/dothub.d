@@ -90,7 +90,7 @@ vim /etc/hosts
 # 127.0.1.1 arch.localdomain arch
 
 # 3.step: add group/user
-groupadd －g 1248 stargazer
+groupadd -g 1248 stargazer
 useradd -m -g stargazer -G wheel -s /bin/bash -d /home/aylax aylax
 passwd aylax
 echo "aylax ALL=(ALL) ALL" >> /etc/sudoers
@@ -106,7 +106,15 @@ pacman -Syy
 pacman -S archlinuxcn-keyring
 pacman -S yaourt linux-headers
 yaourt -S broadcom-wl-dkms
-reboot
+# reboot
+# }}}
+
+# {{{Fix bluetooth not found 
+dmesg | grep -i blue | grep BCM
+# Download BCM43142A0-105b-e065.hcd
+# https://github.com/winterheart/broadcom-bt-firmware
+mv BCM43142A0-105b-e065.hcd /lib/firmware/brcm/
+# reboot
 # }}}
 
 # ==================== x-window ====================== #
@@ -126,4 +134,13 @@ vim ~/.xinitrc
 # exec i3
 startx # to x-window
 
+
+# ==================== aylax ====================== #
+
+# install neovim
+pacman -S wget neovim
+wget https://bootstrap.pypa.io/get-pip.py
+python get-pip.py && rm get-pip.py
+echo "export PATH=$HOME/.local/bin:$PATH" >> $HOME/.bashrc
+pip install pynvim
 
