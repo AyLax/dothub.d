@@ -128,7 +128,7 @@ mv BCM43142A0-105b-e065.hcd /lib/firmware/brcm/
 # ==================== x-window ====================== #
 # {{{ Card
 lspci  | grep -i vga 
-pacman -S xf86-video-intel # Intel
+pacman -S mesa vulkan-intel xf86-video-intel # Intel
 # }}}
 
 pacman -S xorg-server xorg-xinit i3-gaps
