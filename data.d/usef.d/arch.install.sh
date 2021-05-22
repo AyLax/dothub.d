@@ -181,5 +181,11 @@ vim $HOME/.Xresources
 # URxvt.boldfont:xft:Monaco:antialias=True:pixelsize=16,xft:PingFangSC-Regular:antialias=True:pixelsize=16
 # ===============================
 
+# config Second Output Screen
+pacman -S xorg-xrandr
+xrandr # if not found exec xorg-xrandr
+xrandr --output HDMI-1 --mode 1920*1080 # output second screen
+xrandr --output eDP-1 --off # off current screen
+
 
 
