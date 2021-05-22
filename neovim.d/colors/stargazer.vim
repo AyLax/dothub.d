@@ -7,14 +7,14 @@
 
 " Init: {{{
 if version > 580
-	hi clear
-	if exists("syntax_on")
-		syntax reset
-	endif
+    hi clear
+    if exists("syntax_on")
+        syntax reset
+    endif
 endif
 
 if !has('gui_running') && &t_Co != 256
-	finish
+    finish
 endif
 
 set background=dark
@@ -22,7 +22,7 @@ set background=dark
 let g:colors_name='stargazer'
 
 if !exists("g:no_bg")
-	let g:no_bg = 0
+    let g:no_bg = 0
 endif
 " }}}
 
@@ -59,9 +59,9 @@ let s:vlgray = s:stargazer.verylightgray
 let s:fg1 = s:stargazer.comments
 let s:fg0 = s:stargazer.lightblue
 if g:no_bg == 0
-	let s:bg = s:stargazer.background
+    let s:bg = s:stargazer.background
 else
-	let s:bg = ['NONE', 'NONE']
+    let s:bg = ['NONE', 'NONE']
 endif
 let s:bg = s:stargazer.background
 let s:c = s:stargazer.cursor
@@ -83,39 +83,39 @@ let s:undercurl = 'undercurl'
 function! s:hi(group, ...)
     " Arguments: group, guifg/ctermfg, guibg/ctermbg, gui/cterm/term, *guisp
 
-	" foreground
-	if a:0 >=# 1
-		let l:fg = a:1
-	else
-		let l:bg = s:none
-	endif
+    " foreground
+    if a:0 >=# 1
+        let l:fg = a:1
+    else
+        let l:bg = s:none
+    endif
 
 	" background
-	if a:0 >=# 2
-		let l:bg = a:2
-	else
-		let l:bg = s:none
-	endif
+    if a:0 >=# 2
+        let l:bg = a:2
+    else
+        let l:bg = s:none
+    endif
 
 	" attribute
-	if a:0 >=# 3 && strlen(a:3)
-		let l:attr = a:3
-	else
-		let l:attr = 'NONE'
-	endif
+    if a:0 >=# 3 && strlen(a:3)
+        let l:attr = a:3
+    else
+        let l:attr = 'NONE'
+    endif
 
-	let l:highlight = [ 'hi!', a:group,
-		\ 'guifg=' . l:fg[0], 'ctermfg=' . l:fg[1],
-		\ 'guibg=' . l:bg[0], 'ctermbg=' . l:bg[1],
-		\ 'gui=' . l:attr, 'cterm=' . l:attr, 'term=' . l:attr
-		\ ]
+    let l:highlight = [ 'hi!', a:group,
+        \ 'guifg=' . l:fg[0], 'ctermfg=' . l:fg[1],
+        \ 'guibg=' . l:bg[0], 'ctermbg=' . l:bg[1],
+        \ 'gui=' . l:attr, 'cterm=' . l:attr, 'term=' . l:attr
+        \ ]
 
-	" special
-	if a:0 >=# 4
-		call add(l:highlight, 'guisp=' . a:4[0])
-	endif
+    " special
+    if a:0 >=# 4
+        call add(l:highlight, 'guisp=' . a:4[0])
+    endif
 
-	execute join(l:highlight, ' ')
+    execute join(l:highlight, ' ')
 endfunction
 " }}}
 
@@ -341,10 +341,10 @@ call s:hi('SpellLocal', s:bluegray)
 if has("gui_running") && has("spell")
 " if gvim set "spell" attributes to "undercurl"
 
-	call s:hi('SpellBad', s:none, s:none, s:undercurl, s:red)
-	call s:hi('SpellCap', s:none, s:none, s:undercurl, s:blue)
-	call s:hi('SpellRare', s:none, s:none, s:undercurl, s:purple)
-	call s:hi('SpellLocal', s:none, s:none, s:undercurl, s:fg1)
+    call s:hi('SpellBad', s:none, s:none, s:undercurl, s:red)
+    call s:hi('SpellCap', s:none, s:none, s:undercurl, s:blue)
+    call s:hi('SpellRare', s:none, s:none, s:undercurl, s:purple)
+    call s:hi('SpellLocal', s:none, s:none, s:undercurl, s:fg1)
 
 endif
 " }}}
