@@ -1,13 +1,15 @@
 URxvt.scrollBar:False
-URxvt.scrollBar_right: false
-URxvt.inheritPixmap:true
-URxvt.borderLess:False Xft.dpi:96
+URxvt.scrollBar_right: False
+URxvt.inheritPixmap:Frue
+URxvt.borderLess:False
+URxvt.internalBorder: 3
+URxvt.externalBorder: 3
+Xft.dpi:96
 
 
 URxvt.depth: 32
-URxvt.internalBorder: 24
-URxvt.cursorBlink: true
-URxvt.cursorUnderline: false
+URxvt.cursorBlink: True
+URxvt.cursorUnderline: False
 URxvt.saveline: 2048
 
 URxvt.keysym.Shift-Up: command:\033]720;1\007
@@ -61,4 +63,3 @@ xft:PingFangSC-Regular:antialias=True:pixelsize=16
 ! white
 *.color7:       #ff0200
 *.color15:      #ff0000
-
