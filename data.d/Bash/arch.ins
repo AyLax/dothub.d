@@ -198,13 +198,5 @@ alsamixer # sound volume control
 
 # GPU Support
 pacman -S vulkan-intel vulkan-devel
-sudo vim /etc/X11/xorg.conf.d/20-intel.conf
-# ===============================
-Section "Device"
-    Identifier "Intel Graphics"
-    Driver     "intel"
-    Option     "DRI" "3"
-EndSection
-# ===============================
 
 
