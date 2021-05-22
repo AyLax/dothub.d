@@ -184,7 +184,7 @@ vim $HOME/.Xresources
 # config Second Output Screen
 pacman -S xorg-xrandr
 xrandr # if not found exec xorg-xrandr
-xrandr --output HDMI-1 --mode 1920*1080 # output second screen
+xrandr --output HDMI-1 --mode 1920x1080 # output second screen
 xrandr --output eDP-1 --off # off current screen
 
 
