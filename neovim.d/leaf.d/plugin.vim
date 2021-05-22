@@ -28,8 +28,7 @@ call plug#end()
 " Configuration
 
 "" NERDTree
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-space> :NERDTreeToggle<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let NERDTreeShowHidden=1
