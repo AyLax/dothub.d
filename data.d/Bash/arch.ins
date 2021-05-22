@@ -124,6 +124,7 @@ mv BCM43142A0-105b-e065.hcd /lib/firmware/brcm/
 # reboot
 # }}}
 
+
 # ==================== x-window ====================== #
 # {{{ Card
 lspci  | grep -i vga 
@@ -177,5 +178,21 @@ xrandr # if not found exec xorg-xrandr
 xrandr --output HDMI-1 --mode 1920x1080 # output second screen
 xrandr --output eDP-1 --off # off current screen
 
+
+# {{{Fix Audio work wrong
+pacman -S alsa-utils
+aplay -l # show audio device
+amixer scontrols # show cards
+amixer -c 1 scontrols # show master and cards
+
+vim $HOME/.asoundrc
+# ===============================
+defaults.pcm.card 1
+defaults.pcm.device 1
+defaults.ctl.card 1
+# ===============================
+
+alsamixer # sound volume control
+# }}}
 
 
