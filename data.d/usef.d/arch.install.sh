@@ -61,10 +61,11 @@ echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 echo "zh_CN.UTF-8 UTF-8" >> /etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
-export LANG=en_US.UTF-8
+LANG=en_US.UTF-8
 echo arch > /etc/hostname
 passwd # set password
 pacman -S iwd dialog netctl sudo vim
+echo "set bell-style none" >> /etc/inputrc
 
 # 9.step save grub
 pacman -S grub
