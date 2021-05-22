@@ -1,14 +1,24 @@
 .
-├── .proj
-├── LICENSE
-├── README.md
 ├── data.d/
-│   ├── font.d/
+│   ├── Bash/
+│   │   ├── arch.ins
+│   │   └── git.tpr
+│   ├── Doc/
+│   │   └── webstar.md
+│   └── Res/
+│       └── urxvt.res
+├── font.d/
+│   ├── install.sh
+│   ├── Monaco/
 │   │   └── Monaco.ttf
-│   └── usef.d/
-│       ├── arch.sh
-│       ├── webp.md
-│       └── wlb-git.sh
+│   └── PingFang/
+│       ├── PingFangSC-Light.ttf
+│       ├── PingFangSC-Medium.ttf
+│       ├── PingFangSC-Regular.ttf
+│       ├── PingFangSC-Semibold.ttf
+│       ├── PingFangSC-Thin.ttf
+│       └── PingFangSC-UltraLight.ttf
+├── LICENSE
 ├── neovim.d/
 │   ├── autoload/
 │   │   ├── .gitkeep
@@ -22,7 +32,10 @@
 │   │   └── plugin.vim
 │   └── snippets.d/
 │       ├── all.snippets
-│       └── rust.snippets
-└── proj.gen
+│       ├── rust.snippets
+│       └── vim.snippets
+├── .proj
+├── proj.gen
+└── README.md
 
-8 directories, 17 files
+12 directories, 26 files
