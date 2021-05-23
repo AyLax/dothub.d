@@ -21,10 +21,8 @@ URxvt.keysym.Control-Left: \033[1;5D
 
 URxvt.iso14755: False
 
-URxvt.font:xft:Monaco:antialias=True:pixelsize=16, \
-xft:PingFangSC-Regular:antialias=True:pixelsize=16
-URxvt.boldfont:xft:Monaco:antialias=True:pixelsize=16, \
-xft:PingFangSC-Regular:antialias=True:pixelsize=16
+URxvt.font:xft:Monaco:antialias=True:pixelsize=16, xft:PingFangSC\\-Regular
+URxvt.boldfont:xft:Monaco:antialias=True:pixelsize=16, xft:PingFangSC\\-Regular
 
 
 ! special
