@@ -9,11 +9,10 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod4
+# set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Monaco 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -42,13 +41,13 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+# bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id rofi -show drun --theme fancy
+# bindsym $mod+d exec --no-startup-id rofi -show drun --theme fancy
 #bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
@@ -184,8 +183,36 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
+# bar {
+# }
+
+
+# ==================== Aylax Custom ============================
+# set mod
+set $mod Mod4
+
+# bind a terminal
+bindsym $mod+Return exec urxvt
+# start dmenu
+bindsym $mod+d exec --no-startup-id rofi -show drun --theme fancy
+font pango:Monaco 8
+for_window [class="^.*"] border pixel 0
+for_window [class="QEMU*"] floating enable, size 1280 x 800
+
+# Assign app
+assign [class="^Firefox$"] 1
+gaps inner 3
+gaps outer 3
+
+new_window none
+new_float none
+default_border none
+default_floating_border none
+hide_edge_borders both
+
+# start i3-bar [i3status-rust]
 bar {
-    font pango:DejaVu Sans Mono, FontAwesome 12
+    font pango:DejaVu Sans Mono, FontAwesome 9
     position top
     status_command i3status-rs ~/.config/i3/status.toml
     colors {
@@ -198,20 +225,3 @@ bar {
         urgent_workspace #2f343a #900000 #ffffff
     }
 }
-
-
-# ==================== assign ============================
-assign [class="^Firefox$"] 2
-
-
-
-# i3-gaps
-for_window [class="^.*"] border pixel 0
-gaps inner 3
-gaps outer 3
-
-new_window none
-new_float none
-default_border none
-default_floating_border none
-hide_edge_borders both
