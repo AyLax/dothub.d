@@ -191,19 +191,22 @@ bindsym $mod+r mode "resize"
 # set mod
 set $mod Mod4
 
+# set font
+font pango:Monaco 8
+
 # bind a terminal
 bindsym $mod+Return exec urxvt
+
 # start dmenu
 bindsym $mod+d exec --no-startup-id rofi -show drun --theme fancy
-font pango:Monaco 8
 for_window [class="^.*"] border pixel 0
-for_window [class="QEMU*"] floating enable, size 1280 x 800
 
-# Assign app
-assign [class="^Firefox$"] 1
+# set gaps
 gaps inner 3
 gaps outer 3
 
+
+# no border style
 new_window none
 new_float none
 default_border none
