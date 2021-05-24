@@ -210,6 +210,6 @@ wget https://download.qemu.org/qemu-5.0.1.tar.xz
 tar xvJf qemu-5.0.1.tar.xz
 cd qemu-5.0.1
 ./configure --target-list=riscv64-softmmu,riscv64-linux-user --prefix=/home/aylax/.local/bin
-make
+make -j $(nproc) # run cpu cnt
 make install 
 
