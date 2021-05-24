@@ -17,3 +17,7 @@
 
 ## Qemu: X-OS emulator
 [qemu](https://www.qemu.org/)
+
+
+## YiYun Blog
+[YiYun Blog](https://blog.lilydjwg.me/)
