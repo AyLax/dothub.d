@@ -203,6 +203,13 @@ pacman -S vulkan-intel vulkan-devel
 # Which give a handy way to save 
 # and run project-specific commands 
 pacman -S just
+
 # Install Qemu Emulator V5.0+
-pacman -U https://archive.archlinux.org/packages/q/qemu-arch-extra/qemu-arch-extra-5.0.0-6-x86_64.pkg.tar.zst 
+# Download from https://www.qemu.org/
+wget https://download.qemu.org/qemu-5.0.1.tar.xz
+tar xvJf qemu-5.0.1.tar.xz
+cd qemu-5.0.1
+./configure --target-list=riscv64-softmmu,riscv64-linux-user --prefix=/home/aylax/.local/bin
+make
+make install 
 
