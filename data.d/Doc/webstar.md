@@ -21,3 +21,6 @@
 
 ## YiYun Blog
 [YiYun Blog](https://blog.lilydjwg.me/)
+
+## Avatar Generator Web
+[Avatar Generator](https://www.thiswaifudoesnotexist.net/)
