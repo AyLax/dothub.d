@@ -151,8 +151,8 @@ vim /etc/hosts
 # ===============================
 
 # 3.step: add group/user
-groupadd -g 1248 stargazer
-useradd -m -g stargazer -G wheel -s /bin/bash -d /home/aylax aylax
+groupadd -g 1248 lynn
+useradd -m -g lynn -G wheel -s /bin/bash -d /home/aylax aylax
 passwd aylax
 echo "aylax ALL=(ALL) ALL" >> /etc/sudoers
 
@@ -188,12 +188,13 @@ mv BCM43142A0-105b-e065.hcd /lib/firmware/brcm/
 # ==================== x-window ====================== #
 # {{{ Card
 lspci  | grep -i vga 
+pacman -S xf86-video-vesa # Common or
 pacman -S mesa xf86-video-intel # Intel
 # }}}
 
+pacman -S xorg-xrandr
 pacman -S xorg-server xorg-xinit i3-gaps
-pacman -S firefox rofi ranger rxvt-unicode
-pacman -S adobe-source-code-pro-fonts
+pacman -S rofi ranger rxvt-unicode
 cp /etc/X11/xinit/xinitrc ~/.xinitrc
 
 vim ~/.xinitrc 
@@ -206,7 +207,7 @@ startx # to x-window
 # ===============================
 
 
-# ==================== aylax ====================== #
+# ==================== aylax default ====================== #
 
 # clone aylax-dothub.d && init home context
 pacman -S git wget openssh
@@ -216,27 +217,29 @@ ssh-keygen
 # copy $HOME/.ssh/id_rsa.pub 
 # to github.com/user/setting/sshkey
 cd $HOME
+# copy ~/.ssh/id_rsa.pub to github
+pacman -S google-chrome i3status-rust
 git clone git@github.com:AyLax/dothub.d.git
 sh dothub.d/font.d/install.sh
 sh dothub.d/neovim.d/install.sh
+cd dothub.d/data.d
 
 # install neovim
 pacman -S neovim
 wget https://bootstrap.pypa.io/get-pip.py
 python get-pip.py && rm get-pip.py
-echo "export PATH=$HOME/.local/bin:$PATH" >> $HOME/.bashrc
+vim $HOME/.bashrc
+# ===============================
+# export PATH=$HOME/.local/bin:$PATH"
+# ===============================
 pip install pynvim
 
-# install urxvt
-pacman -S urxvt
-touch $HOME/.Xresources
-cat $HOME/dothub.d/data.d/Res/urxvt.res > $HOME/.Xresources
 
-# config Second Output Screen
-pacman -S xorg-xrandr
+# {{{ config Second Output Screen
 xrandr # if not found exec xorg-xrandr
 xrandr --output HDMI-1 --mode 1920x1080 # output second screen
 xrandr --output eDP-1 --off # off current screen
+# }}}
 
 
 # {{{Fix Audio work wrong
@@ -256,6 +259,7 @@ alsamixer # sound volume control
 # }}}
 
 
+# ==================== aylax develop ====================== #
 # GPU Support
 pacman -S vulkan-intel vulkan-devel
 
