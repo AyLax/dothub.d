@@ -110,11 +110,26 @@ umount /mnt/{boot,home,}
 # {{{ GPT
 pacman -S grub efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=grub
+
+vim /etc/default/grub
+# print boot log
+# ===============================
+# GRUB_CMDLINE_LINUX_DEFAULT="splash"
+# GRUB_CMDLINE_LINUX="splash"
+# ::1 localhost
+# 127.0.1.1 arch.localdomain arch
+# ===============================
 grub-mkconfig -o /boot/grub/grub.cfg
 exit
 umount /mnt/boot/EFI
 umount /mnt/{boot,home,}
- 
+# }}}
+
+# {{{ if boot load slowly; then do
+# cat /etc/fstab | grep swap
+# blkid | grep swap 
+# # if uuid is not equal,
+# # modify fstab's swap uuid by blkid
 # }}}
 
 
