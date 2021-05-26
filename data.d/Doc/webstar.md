@@ -24,3 +24,6 @@
 
 ## Avatar Generator Web
 [Avatar Generator](https://www.thiswaifudoesnotexist.net/)
+
+## UEFI Boot Loader
+[Clover: Refind+](https://dragonfly.fun/osx/clover.html)
