@@ -1,11 +1,12 @@
 #/bin/bash
 
-# Only for ArchLinux-5.11.16+ [BIOS]
+# Only for ArchLinux-5.11.16+ [MBR] or [EFI]
 
 # ========================= install ========================== #
 # 1.step: check boot way
-# check boot: if dictionary exists; then efi else maybe bios
+# check boot: if dictionary exists; then efi else maybe mbr
 ls /sys/firmware/efi/efivars
+
 
 # 2.step: connect network
 iwctl # connect wifi
@@ -14,18 +15,29 @@ iwctl # connect wifi
 # [iwd#] station wlan0 get-networks
 # [iwd#] station wlan0 connect wifiname
 # [iwd#] exit 
+
+# {{{ if wlan0 off
+# ip link set wlan0 up # if no posible by rf-kill
+# rfkill unblock wifi # then reinput iwctl...
+# }}}
+
 ping.archlinux.org # test connect
+
 
 # 3.step: sync time
 timedatectl set-ntp true
 timedatectl status
 
+
 # 4.step: update mirrors
 reflector -c China -a 6 --sort rate --save  /etc/pacman.d/mirrorlist
 pacman -Syy
 
-# 5.step: parted disk
-lsblk # info it
+
+# 5.step: parted disk && gen bootloader
+lsblk # list disk device
+
+# {{{ MBR
 cfdisk /dev/sdx # part sdx
 # only for reference:
 # [new] -> [type]-> [write]
@@ -33,6 +45,7 @@ cfdisk /dev/sdx # part sdx
 # /dev/sda1   512M   Linux filesystem [/boot]
 # /dev/sda2   40G    Linux filesystem [/]
 # /dev/sda3   64G    Linux filesystem [/home]
+# /dev/sda4   4G     Linux swap
 
 mkfs.ext2 /dev/sda1
 mkfs.ext4 /dev/sda2
@@ -42,37 +55,70 @@ mount /dev/sda2 /mnt
 mkdir /mnt/{boot,home}
 mount /dev/sda1 /mnt/boot
 mount /dev/sda3 /mnt/home
+mkswap /dev/sda4
+swapon /dev/sda4
+# END MBR }}}
 
-# Add swap partition if ramdisk less than 4G
+# {{{ EFI
+# only for reference:
 # disk        size   type             mnt
-# /dev/sda4   4G     Linux swap
-# mkswap /dev/sda4
-# swapon /dev/sda4
+# /dev/sda1   512M   EFI              [/efi]
+# /dev/sda2   1G     FAT32            [/boot]
+# /dev/sda3   120G   EXT4             [/]
+# /dev/sda4   336G   EXT4             [/home]
+# /dev/sda5   8.3G   Linux swap
+mount /dev/sda3 /mnt
+mkdir /mnt/{boot,home}
+mkdir /mnt/boot/EFI
+mount /dev/sda2 /mnt/boot
+mount /dev/sda1 /mnt/boot/EFI
+mount /dev/sda4 /mnt/home
+mkswap /dev/sda5
+swapon /dev/sda5
+# }}}
 
-# 6.step: install system
+
+# 6.step gen grub loader
 pacstrap /mnt base base-devel dhcpcd linux linux-firmware
-
-# 7.step: gen partition table
 genfstab -U /mnt >> /mnt/etc/fstab
 
-# 8.step: switch inner system
+
+# 7.step: chroot
 arch-chroot /mnt
+# time zone && locale
+ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+hwclock --systohc
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 echo "zh_CN.UTF-8 UTF-8" >> /etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 LANG=en_US.UTF-8
-echo arch > /etc/hostname
 passwd # set password
-pacman -S iwd dialog netctl sudo vim
-echo "set bell-style none" >> /etc/inputrc
+pacman -S iwd sudo vim
+echo arch > /etc/hostname #hostname
 
-# 9.step save grub
+
+# 8.step choose boot-loader
+# {{{ MBR
 pacman -S grub
 grub-install  --no-floppy --target=i386-pc --force --recheck --debug /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 exit
 umount /mnt/{boot,home,}
+# }}}
+
+# {{{ GPT
+pacman -S grub efibootmgr
+grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=grub
+grub-mkconfig -o /boot/grub/grub.cfg
+exit
+umount /mnt/boot/EFI
+umount /mnt/{boot,home,}
+ 
+# }}}
+
+
+# 9.step exit && umount
 reboot
 
 
@@ -81,10 +127,7 @@ reboot
 systemctl enable systemd-resolved dhcpcd iwd
 systemctl start  systemd-resolved dhcpcd iwd
 
-# 2.step: zone & host
-ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-hwclock --systohc
-
+# 2.step: host
 vim /etc/hosts
 # ===============================
 # 127.0.0.1 localhost
@@ -100,6 +143,8 @@ echo "aylax ALL=(ALL) ALL" >> /etc/sudoers
 
 
 # ==================== driver ====================== #
+# disable annoying sounds
+echo "set bell-style none" >> /etc/inputrc
 # {{{Fix wlan0 not found & if echo  BCM43142 802.11b/g/n (rev 0)
 lspci -k | grep -A 2 -i network
 
