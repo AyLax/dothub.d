@@ -27,3 +27,9 @@
 
 ## UEFI Boot Loader
 [Clover: Refind+](https://dragonfly.fun/osx/clover.html)
+
+## A Lovely Hexo Theme 
+[Hexo-Theme-Yun](https://yun.yunyoujun.cn/guide/)
+
+## Rust-ActixWeb
+[Actix-Web](https://actix.rs/)
