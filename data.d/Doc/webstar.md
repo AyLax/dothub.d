@@ -39,3 +39,4 @@
 
 ## AyLax Page
 [AyLax.Page.Hex](https://aylax-page-hex.vercel.app/)
+[AyLax.Page.Hex](https://aylax.github.io/)
