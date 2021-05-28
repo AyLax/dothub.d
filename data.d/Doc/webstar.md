@@ -28,6 +28,9 @@
 ## UEFI Boot Loader
 [Clover: Refind+](https://dragonfly.fun/osx/clover.html)
 
+## A better deploy platform of gitHub pages 
+[vercel](https://vercel.com/)
+
 ## A Lovely Hexo Theme 
 [Hexo-Theme-Yun](https://yun.yunyoujun.cn/guide/)
 
