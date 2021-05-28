@@ -36,3 +36,6 @@
 
 ## Rust-ActixWeb
 [Actix-Web](https://actix.rs/)
+
+## AyLax.Page.Hexo
+[Page.Hexo](https://page-hexo.vercel.app/)
