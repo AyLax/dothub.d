@@ -1,3 +1,3 @@
 #!/bin/bash
-ln -s $HOME/dothub.d/font.d $HOME/.fonts
+ln -sf $HOME/dothub.d/font.d $HOME/.fonts
 fc-cache -fv $HOME/.fonts

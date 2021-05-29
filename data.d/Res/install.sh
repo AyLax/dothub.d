@@ -1,7 +1,8 @@
-RES_PATH=$HOME/dothub.d/data.d/Res
-cd $RES_PATH
-echo $RES_PATH
-cat i3.res > $HOME/.config/i3/config
-cat i3.status.toml > $HOME/.config/i3/status.toml
-cat urxvt.res > $HOME/.Xdefaults
-cat alias.res >> $HOME/.bashrc
+if [ ! -d $HOME/.config/i3 ];then
+    mkdir -p $HOME/.config/i3
+fi
+path="$HOME/dothub.d/data.d/Res"
+ln -sf $path/i3.res $HOME/.config/i3/config
+ln -sf $path/i3.status.toml $HOME/.config/i3/status.toml
+ln -sf $path/urxvt.res $HOME/.Xdefaults
+ln -sf $path/bash.res $HOME/.bashrc

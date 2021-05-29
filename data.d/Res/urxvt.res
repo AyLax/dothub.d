@@ -1,14 +1,14 @@
-Xft.dpi:96
+Xft.dpi: 96
 
 
 !! border
-URxvt.borderLess:False
+URxvt.borderLess: False
 URxvt.internalBorder: 3
 URxvt.externalBorder: 3
 
 
 !! scroll
-URxvt.scrollBar:False
+URxvt.scrollBar: False
 URxvt.scrollBar_right: False
 URxvt.inheritPixmap:True
 
@@ -31,9 +31,9 @@ URxvt.keysym.Control-Left: \033[1;5D
 
 !! font
 URxvt.iso14755: False
-URxvt.multichar_encoding:utf-8
-URxvt.font:xft:Monaco:size=12:antialias=true,xft:PingFangSC\\-Regular:pixelsize=16
-URxvt.boldfont:xft:Monaco:size=12:antialias=true,xft:PingFangSC\\-Semibold:pixelsize=16
+URxvt.multichar_encoding: utf-8
+URxvt.font: xft:Monaco:size=12, xft:PingFangSC\\-Regular
+URxvt.boldfont: xft:Monaco:size=12, xft:PingFangSC\\-Semibold
 
 
 !! color
