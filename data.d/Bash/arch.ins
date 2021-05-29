@@ -10,11 +10,11 @@ ls /sys/firmware/efi/efivars
 
 # 2.step: connect network
 iwctl # connect wifi
-# [iwd#] device list
-# [iwd#] station wlan0 scan
-# [iwd#] station wlan0 get-networks
-# [iwd#] station wlan0 connect wifiname
-# [iwd#] exit 
+[X] device list
+[X] station wlan0 scan
+[X] station wlan0 get-networks
+[X] station wlan0 connect wifiname
+[X] exit 
 
 # {{{ if wlan0 off
 # ip link set wlan0 up # if no posible by rf-kill
@@ -242,6 +242,22 @@ xrandr --output HDMI-1 --mode 1920x1080 # output second screen
 xrandr --output eDP-1 --off # off current screen
 # }}}
 
+
+# {{{ Bluetooth
+rfkill list
+# rfkill unblock bluetooth
+pacman -S bluez bluez-utils
+systemctl enable bluetooth
+systemctl start bluetooth
+bluetoothctl
+[X] power on
+[X] agent on
+[X] default agent
+[X] scan on
+[X] trust :ID:
+[X] connect :ID:
+[X] exit
+# }}}
 
 # {{{Fix Audio work wrong
 pacman -S alsa-utils
