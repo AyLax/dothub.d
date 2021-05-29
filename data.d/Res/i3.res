@@ -191,14 +191,18 @@ font pango:Monaco 8
 # bind a terminal
 bindsym $mod+Return exec urxvt
 
+# bind to fcitx tool ui
+bindsym $mod+g exec --no-startup-id fcitx-configtool
+
 # start dmenu
 bindsym $mod+d exec --no-startup-id rofi -show drun --theme fancy
+
+# set window border
 for_window [class="^.*"] border pixel 0
 
 # set gaps
 gaps inner 3
 gaps outer 3
-
 
 # no border style
 new_window none

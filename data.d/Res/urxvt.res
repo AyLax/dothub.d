@@ -1,17 +1,26 @@
-URxvt.scrollBar:False
-URxvt.scrollBar_right: False
-URxvt.inheritPixmap:True
-URxvt.borderLess:False
-URxvt.internalBorder: 3
-URxvt.externalBorder: 3
 Xft.dpi:96
 
 
+!! border
+URxvt.borderLess:False
+URxvt.internalBorder: 3
+URxvt.externalBorder: 3
+
+
+!! scroll
+URxvt.scrollBar:False
+URxvt.scrollBar_right: False
+URxvt.inheritPixmap:True
+
+
+!! cursor
 URxvt.depth: 32
 URxvt.cursorBlink: True
 URxvt.cursorUnderline: False
 URxvt.saveline: 2048
 
+
+!! special key value
 URxvt.keysym.Shift-Up: command:\033]720;1\007
 URxvt.keysym.Shift-Down: command:\033]721;1\007
 URxvt.keysym.Control-Up: \033[1;5A
@@ -19,13 +28,15 @@ URxvt.keysym.Control-Down: \033[1;5B
 URxvt.keysym.Control-Right: \033[1;5C
 URxvt.keysym.Control-Left: \033[1;5D
 
+
+!! font
 URxvt.iso14755: False
+URxvt.multichar_encoding:utf-8
+URxvt.font:xft:Monaco:size=12:antialias=true,xft:PingFangSC\\-Regular:pixelsize=16
+URxvt.boldfont:xft:Monaco:size=12:antialias=true,xft:PingFangSC\\-Semibold:pixelsize=16
 
-URxvt.font:xft:Monaco:size=12:antialias=true, xft:PingFangSC\\-Regular:size=12:antialias=true
-URxvt.boldfont:xft:Monaco:size=12:antialias=true, xft:PingFangSC\\-Regular:size=12:antialias=true
 
-
-! special
+!! color
 *.foreground:   #ffffff
 *.background:   #2b2836
 *.cursorColor:  #ff2800
