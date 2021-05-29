@@ -1,15 +1,15 @@
-URxvt.scrollBar:false
-URxvt.scrollBar_right: false
-URxvt.inheritPixmap:true
-URxvt.borderLess:false
+URxvt.scrollBar:False
+URxvt.scrollBar_right: False
+URxvt.inheritPixmap:True
+URxvt.borderLess:False
 URxvt.internalBorder: 3
 URxvt.externalBorder: 3
 Xft.dpi:96
 
 
 URxvt.depth: 32
-URxvt.cursorBlink: true
-URxvt.cursorUnderline: false
+URxvt.cursorBlink: True
+URxvt.cursorUnderline: False
 URxvt.saveline: 2048
 
 URxvt.keysym.Shift-Up: command:\033]720;1\007
@@ -19,7 +19,7 @@ URxvt.keysym.Control-Down: \033[1;5B
 URxvt.keysym.Control-Right: \033[1;5C
 URxvt.keysym.Control-Left: \033[1;5D
 
-URxvt.iso14755: false
+URxvt.iso14755: False
 
 URxvt.font:xft:Monaco:size=12:antialias=true, xft:PingFangSC\\-Regular:size=12:antialias=true
 URxvt.boldfont:xft:Monaco:size=12:antialias=true, xft:PingFangSC\\-Regular:size=12:antialias=true
