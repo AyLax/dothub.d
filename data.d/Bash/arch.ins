@@ -299,24 +299,3 @@ exec --no-startup-id fcitx-autostart
 # GPU Support
 pacman -S vulkan-intel vulkan-devel
 
-# Install just 
-# Which give a handy way to save 
-# and run project-specific commands 
-pacman -S just
-
-# Install Qemu Emulator V5.0+
-# {{{ Install by pacman
-pacman -S qemu # only qemu-system_x86_64
-pacman -S qemu-arch-extra # more system
-# }}}
-#
-# Download from https://www.qemu.org/
-# {{{ Install by Source Code
-wget https://download.qemu.org/qemu-5.0.1.tar.xz
-tar xvJf qemu-5.0.1.tar.xz
-cd qemu-5.0.1
-./configure --target-list=riscv64-softmmu,riscv64-linux-user --prefix=/home/aylax/.local/bin
-make -j $(nproc) # run cpu cnt
-make install 
-# }}}
-
