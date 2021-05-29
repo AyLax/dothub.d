@@ -214,10 +214,8 @@ pacman -S git wget openssh
 ssh-keygen
 # git confg --global user.email youremail
 # git confg --global user.name yourname
-# copy $HOME/.ssh/id_rsa.pub 
-# to github.com/user/setting/sshkey
+# copy $HOME/.ssh/id_rsa.pub to github
 cd $HOME
-# copy ~/.ssh/id_rsa.pub to github
 pacman -S google-chrome i3status-rust
 pacman -S adobe-source-code-pro-fonts
 git clone git@github.com:aylax/dothub.d.git
@@ -273,6 +271,27 @@ defaults.ctl.card 1
 # ===============================
 
 alsamixer # sound volume control
+# }}}
+
+
+# {{{ install fcitx-im
+pacman -S fcitx-im fcitx-configtool
+pacman -S fcitx-goolepinyin
+vim ~/.xinitrc
+# ===============================
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+# ===============================
+
+fcitx-configtool # custom-fcitx
+
+vim ~/.config/i3/config
+# ===============================
+exec --no-startup-id fcitx-autostart
+# ===============================
+
+#reboot
 # }}}
 
 

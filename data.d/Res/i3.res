@@ -228,3 +228,6 @@ bar {
         urgent_workspace #2f343a #900000 #ffffff
     }
 }
+
+
+exec --no-startup-id fcitx-autostart
