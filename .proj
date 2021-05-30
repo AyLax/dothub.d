@@ -12,7 +12,8 @@
 │       ├── i3-bar.toml
 │       ├── i3.conf
 │       ├── install.sh
-│       └── kitty.conf
+│       ├── kitty.conf
+│       └── pkg.gen
 ├── font.d/
 │   ├── install.sh
 │   └── Monaco/
@@ -37,4 +38,4 @@
 ├── proj.gen
 └── README.md
 
-11 directories, 26 files
+11 directories, 27 files
