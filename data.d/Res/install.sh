@@ -1,13 +1,13 @@
 path="$HOME/dothub.d/data.d/Res"
-cat $path/bash.res > $HOME/.bashrc
+ln -sf $path/bash.res $HOME/.bashrc
 
 if [ ! -d $HOME/.config/i3 ];then
     mkdir -p $HOME/.config/i3
 fi
-cat $path/i3.res > $HOME/.config/i3/config
-cat $path/i3.status.toml > $HOME/.config/i3/status.toml
+ln -sf $path/i3.conf $HOME/.config/i3/config
+ln -sf $path/i3-bar.toml $HOME/.config/i3/status.toml
 
-if [ ! -d $HOME/.config/sakura ];then
-    mkdir -p $HOME/.config/sakura
+if [ ! -d $HOME/.config/kitty ];then
+    mkdir -p $HOME/.config/kitty
 fi
-cat $path/sakura.res > $HOME/.config/sakura/sakura.conf
+ln -sf $path/kitty.conf $HOME/.config/kitty/kitty.conf
