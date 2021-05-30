@@ -33,7 +33,7 @@ URxvt.keysym.Control-Left: \033[1;5D
 URxvt.iso14755: False
 URxvt.multichar_encoding: utf-8
 URxvt.font: xft:Monaco:size=12, xft:PingFangSC\\-Regular
-URxvt.boldfont: xft:Monaco:size=12, xft:PingFangSC\\-Semibold
+URxvt.boldfont: xft:Monaco:size=12, xft:PingFangSC\\-Regular
 
 
 !! color

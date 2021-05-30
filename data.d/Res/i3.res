@@ -9,7 +9,11 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-# set $mod Mod4
+# set mod
+set $mod Mod4
+
+# set font
+font pango:Monaco 8
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -181,11 +185,6 @@ bindsym $mod+r mode "resize"
 
 
 # ==================== Aylax Custom ============================
-# set mod
-set $mod Mod4
-
-# set font
-font pango:Monaco 8
 
 # bind a terminal
 bindsym $mod+Return exec sakura
