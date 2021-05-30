@@ -34,6 +34,7 @@ linux 5.12.6.arch1-1
 linux-firmware 20210511.7685cf4-1
 m4 1.4.18-3
 make 4.3-3
+man-db 2.9.4-1
 neovim 0.4.4-1
 nodejs 16.2.0-1
 npm 7.14.0-1
