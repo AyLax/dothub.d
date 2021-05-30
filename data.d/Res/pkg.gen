@@ -1,0 +1,3 @@
+#!/bin/bash
+path="$HOME/dothub.d/data.d/Res"
+pacman -Qe > $path/arch.pkg.list

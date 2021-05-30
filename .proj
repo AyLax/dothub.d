@@ -1,0 +1,40 @@
+.
+├── data.d/
+│   ├── Bash/
+│   │   ├── arch.ins
+│   │   └── git.tpr
+│   ├── Doc/
+│   │   ├── linux.md
+│   │   └── webstar.md
+│   └── Res/
+│       ├── arch.pkg.list
+│       ├── bash.res
+│       ├── i3-bar.toml
+│       ├── i3.conf
+│       ├── install.sh
+│       └── kitty.conf
+├── font.d/
+│   ├── install.sh
+│   └── Monaco/
+│       └── Monaco.ttf
+├── LICENSE
+├── neovim.d/
+│   ├── autoload/
+│   │   ├── .gitkeep
+│   │   └── plug.vim
+│   ├── colors/
+│   │   └── stargazer.vim
+│   ├── init.vim
+│   ├── install.sh
+│   ├── leaf.d/
+│   │   ├── base.vim
+│   │   └── plugin.vim
+│   └── snippets.d/
+│       ├── all.snippets
+│       ├── rust.snippets
+│       └── vim.snippets
+├── .proj
+├── proj.gen
+└── README.md
+
+11 directories, 26 files
