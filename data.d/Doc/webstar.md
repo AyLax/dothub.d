@@ -44,3 +44,19 @@
 
 ## Wang Yi Yun
 [Song](https://music.163.com/song/media/outer/url?id=22710887.mp3)
+
+
+## Kitty Terminal
+[Kitty Guide](https://sw.kovidgoyal.net/kitty/conf.html)
+
+
+## Rgb
+[RGB Query Site](https://www.qianbo.com.cn/Tool/Rgba/)
+
+
+## Font Guide
+[Font About](https://www.cnblogs.com/amwuau/p/10756276.html)
+
+
+## IP Address Query
+[IP Address Query](https://www.ipaddress.com/)

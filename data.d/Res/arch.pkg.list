@@ -10,10 +10,6 @@ bluez-utils 5.58-1
 dhcpcd 9.4.0-1
 efibootmgr 17-2
 fakeroot 1.25.3-2
-fcitx 4.2.9.8-1
-fcitx-configtool 0.4.10-4
-fcitx-googlepinyin 0.1.6-7
-fcitx-qt5 1.2.6-1
 file 5.40-3
 findutils 4.8.0-1
 flex 2.6.4-3
@@ -28,6 +24,8 @@ grub 2:2.04-10
 gzip 1.10-3
 i3-gaps 4.19.1-1
 i3status-rust 0.20.1-1
+ibus 1.5.24-1
+ibus-rime 1.5.0-1
 iwd 1.14-1
 kitty 0.20.3-1
 libtool 2.4.6+42+gb88cebd5-16
