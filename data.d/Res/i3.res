@@ -41,7 +41,6 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-# bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -189,7 +188,7 @@ set $mod Mod4
 font pango:Monaco 8
 
 # bind a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec sakura
 
 # bind to fcitx tool ui
 bindsym $mod+g exec --no-startup-id fcitx-configtool
