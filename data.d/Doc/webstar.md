@@ -38,8 +38,8 @@
 [Actix-Web](https://actix.rs/)
 
 ## AyLax Page
-[AyLax.Page.Hex](https://aylax-page-hex.vercel.app/)
-[AyLax.Page.Hex](https://aylax.github.io/)
+[AyLax.Page github](https://aylax.github.io/)
+[AyLax.Page gercel](https://aylax-page-hex-87q9puusq-aylax.vercel.app/)
 
 
 ## Wang Yi Yun
