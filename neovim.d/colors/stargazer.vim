@@ -29,6 +29,7 @@ endif
 
 " Color Palette: {{{
 let s:stargazer = {}
+let s:none = ['NONE', 'NONE']
 " ----------------------------------------------|-----RGB-----|------HSL-------|
 let s:stargazer.white         = ['#fdf6e3', 230] " 253 246 227 |  44°  87% 100% |
 let s:stargazer.lightblue     = ['#dce7fd', 189] " 220 231 253 | 220°  89%  93% |
@@ -61,16 +62,14 @@ let s:fg0 = s:stargazer.lightblue
 if g:no_bg == 0
     let s:bg = s:stargazer.background
 else
-    let s:bg = ['NONE', 'NONE']
+    let s:bg = s:none
 endif
-let s:bg = s:stargazer.background
 let s:c = s:stargazer.cursor
 let s:c2 = s:stargazer.cursor2
 " }}}
 
 
 " Attributes: {{{
-let s:none = ['NONE', 'NONE']
 let s:bold = 'bold'
 let s:italic = 'italic'
 let s:underline = 'underline'
