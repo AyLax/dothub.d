@@ -7,12 +7,13 @@
 │   │   ├── linux.md
 │   │   └── webstar.md
 │   └── Res/
+│       ├── alacritty.yml
 │       ├── arch.pkg.list
 │       ├── bash.res
+│       ├── bg.jpeg
 │       ├── i3-bar.toml
 │       ├── i3.conf
 │       ├── install.sh
-│       ├── kitty.conf
 │       └── pkg.gen
 ├── font.d/
 │   ├── install.sh
@@ -38,4 +39,4 @@
 ├── proj.gen
 └── README.md
 
-11 directories, 27 files
+11 directories, 28 files
