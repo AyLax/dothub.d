@@ -60,3 +60,6 @@
 
 ## IP Address Query
 [IP Address Query](https://www.ipaddress.com/)
+
+## Emoji Query 
+[Emoji](https://emojixd.com/x9ks)
