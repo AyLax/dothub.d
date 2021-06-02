@@ -17,3 +17,4 @@ alias vim='nvim'
 
 export EDITOR=vim
 export PATH=/home/aylax/.local/bin:$PATH
+. "$HOME/.cargo/env"
