@@ -109,7 +109,13 @@ umount /mnt/{boot,home,}
 
 # {{{ GPT
 pacman -S grub efibootmgr
+# {{{ if boot on usb
+# grub-install --target=x86_64-efi --removable --efi-directory=/boot/EFI --bootloader-id=grub
+# chmod -x /etc/grub.d/30_os-proper
+# }}}
+# {{{ else
 grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=grub
+# }}}
 
 vim /etc/default/grub
 # print boot log
