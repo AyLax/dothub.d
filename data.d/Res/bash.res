@@ -13,6 +13,9 @@ alias ll='ls -l'
 alias la='ls -la'
 alias grep='grep --color=auto'
 alias vim='nvim'
+alias find='fd'
+alias grep='rg'
+alias loc='tokei'
 
 
 export EDITOR=vim
