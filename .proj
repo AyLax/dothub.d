@@ -34,10 +34,11 @@
 │   │   └── plugin.vim
 │   └── snippets.d/
 │       ├── all.snippets
+│       ├── markdown.snippets
 │       ├── rust.snippets
 │       └── vim.snippets
 ├── .proj
 ├── proj.gen
 └── README.md
 
-11 directories, 29 files
+11 directories, 30 files
