@@ -14,6 +14,7 @@
 │       ├── i3-bar.toml
 │       ├── i3.conf
 │       ├── install.sh
+│       ├── picom.conf
 │       └── pkg.gen
 ├── font.d/
 │   ├── install.sh
@@ -39,4 +40,4 @@
 ├── proj.gen
 └── README.md
 
-11 directories, 28 files
+11 directories, 29 files

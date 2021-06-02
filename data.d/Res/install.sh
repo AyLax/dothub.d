@@ -1,14 +1,28 @@
+#!/bin/bash
+
 path="$HOME/dothub.d/data.d/Res"
+hack="$HOME/.config"
+
+# bashrc
 ln -sf $path/bash.res $HOME/.bashrc
 
-if [ ! -d $HOME/.config/i3 ];then
-    mkdir -p $HOME/.config/i3
+# i3
+if [ ! -d $hack/i3 ];then
+    mkdir -p $hack/i3
+    ln -sf $path/i3.conf $hack/i3/config
+    ln -sf $path/i3-bar.toml $hack/i3/status.toml
+    ln -sf $path/bg.jpeg $hack/i3/bg.jpeg
 fi
-ln -sf $path/i3.conf $HOME/.config/i3/config
-ln -sf $path/i3-bar.toml $HOME/.config/i3/status.toml
-ln -sf $path/bg.jpeg $HOME/.config/i3/bg.jpeg
 
-if [ ! -d $HOME/.config/alacritty ];then
-    mkdir -p $HOME/.config/alacritty
+# alacritty terminal
+if [ ! -d $hack/alacritty ];then
+    mkdir -p $hack/alacritty
+    ln -sf $path/alacritty.yml $hack/alacritty/alacritty.yml
 fi
-ln -sf $path/alacritty.yml $HOME/.config/alacritty/alacritty.yml
+
+# picom
+if [ ! -d $hack/picom ];then
+    mkdir -p $hack/picom
+    ln -sf $path/picom.conf $hack/picom/picom.conf
+fi
+
