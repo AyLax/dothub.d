@@ -16,6 +16,7 @@ alias vim='nvim'
 alias find='fd'
 alias grep='rg'
 alias loc='tokei'
+alias x='startx'
 
 export EDITOR=vim
 export PATH=/home/aylax/.local/bin:$PATH
