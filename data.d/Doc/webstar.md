@@ -12,7 +12,8 @@
 
 
 ## Zcore
-[Zcore Tutorial](https://rcore-os.github.io/rCore-Tutorial-Book-v3/chapter1/0intro.html)
+[Zcore Tv1](https://rcore-os.github.io/rCore-Tutorial-Book-v3/chapter1/0intro.html)
+[Zcore Tv3](https://www.bookstack.cn/read/rCore-Tutorial-Book-v3-zh/3270a2bb9e824dd3.md)
 
 
 ## Qemu: X-OS emulator
