@@ -305,3 +305,20 @@ exec --no-startup-id ibus-daemon -dr
 # GPU Support
 pacman -S vulkan-intel vulkan-devel
 
+# docker
+pacman -S docker
+systemctl enable docker
+systemctl start docker
+usermod -aG docker $(whoami)
+mkdir -p /etc/docker
+
+tee /etc/docker/daemon.json <<-'EOF'
+{
+  "data-root": "/mnt/docker"
+}
+EOF
+systemctl reload daemon-reload
+systemctl restart docker
+reboot
+
+
