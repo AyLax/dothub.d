@@ -12,6 +12,11 @@ dhcpcd 9.4.0-1
 docker 1:20.10.7-1
 efibootmgr 17-2
 fakeroot 1.25.3-2
+fcitx5 5.0.8-1
+fcitx5-configtool 5.0.5-1
+fcitx5-gtk 5.0.7-1
+fcitx5-qt 5.0.6-1
+fcitx5-rime 5.0.6-1
 fd 8.2.1-1
 feh 3.7-1
 file 5.40-5
@@ -29,8 +34,6 @@ grub 2:2.04-10
 gzip 1.10-3
 i3-gaps 4.19.1-1
 i3status-rust 0.20.1-1
-ibus 1.5.24-1
-ibus-rime 1.5.0-1
 iwd 1.14-1
 libtool 2.4.6+42+gb88cebd5-16
 linux 5.12.9.arch1-1
