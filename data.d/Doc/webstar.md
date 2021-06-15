@@ -64,3 +64,9 @@
 
 ## Emoji Query 
 [Emoji](https://emojixd.com/x9ks)
+
+
+## Haskell Books
+[Learn your haskell](http://learnyouahaskell.com/higher-order-functions)
+
+[Haskell Stack Tool](https://docs.haskellstack.org/en/stable/README/)
