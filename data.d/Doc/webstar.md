@@ -70,3 +70,12 @@
 [Learn your haskell](http://learnyouahaskell.com/higher-order-functions)
 
 [Haskell Stack Tool](https://docs.haskellstack.org/en/stable/README/)
+
+[Write Scheme by Haskell](https://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours/First_Steps)
+
+
+## Data Structure
+[Conflict-free replicated data](https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type)
+
+
+
