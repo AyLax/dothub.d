@@ -79,3 +79,7 @@
 
 
 
+## Impl a text editor
+[kilo](https://viewsourcecode.org/snaptoken/kilo/)
+
+[text struct: piece table](https://darrenburns.net/posts/piece-table/)
