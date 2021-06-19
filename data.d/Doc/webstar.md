@@ -87,3 +87,6 @@
 [vscode source code structure](https://zhuanlan.zhihu.com/p/96041706)
 
 [summary of impl editor](https://www.cnblogs.com/netwy/articles/2027627.html)
+
+[rust text editor package](https://reposhub.com/rust/text-editors)
+
