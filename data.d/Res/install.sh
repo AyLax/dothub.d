@@ -4,7 +4,7 @@ path="$HOME/dothub.d/data.d/Res"
 hack="$HOME/.config"
 
 # bashrc
-ln -sf $path/bash.res $HOME/.bashrc
+ln -sf $path/bashrc $HOME/.bashrc
 
 # i3
 if [ ! -d $hack/i3 ];then
