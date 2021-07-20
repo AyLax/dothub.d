@@ -37,8 +37,9 @@
 │   └── snippets.d/
 │       ├── all.snippets
 │       ├── markdown.snippets
+│       ├── python.snippets
 │       ├── rust.snippets
 │       └── vim.snippets
 └── proj.gen
 
-11 directories, 30 files
+11 directories, 31 files
