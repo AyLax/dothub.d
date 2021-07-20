@@ -64,3 +64,29 @@
 
 ## Emoji Query 
 [Emoji](https://emojixd.com/x9ks)
+
+
+## Haskell Books
+[Learn your haskell](http://learnyouahaskell.com/higher-order-functions)
+
+[Haskell Stack Tool](https://docs.haskellstack.org/en/stable/README/)
+
+[Write Scheme by Haskell](https://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours/First_Steps)
+
+
+## Data Structure
+[Conflict-free replicated data](https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type)
+
+
+
+## Impl a text editor
+[kilo](https://viewsourcecode.org/snaptoken/kilo/)
+
+[text struct: piece table](https://darrenburns.net/posts/piece-table/)
+
+[vscode source code structure](https://zhuanlan.zhihu.com/p/96041706)
+
+[summary of impl editor](https://www.cnblogs.com/netwy/articles/2027627.html)
+
+[rust text editor package](https://reposhub.com/rust/text-editors)
+
