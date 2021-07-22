@@ -5,6 +5,7 @@ hack="$HOME/.config"
 
 # bashrc
 ln -sf $path/bashrc $HOME/.bashrc
+ln -sf $path/.alias $HOME/.alias
 
 # i3
 if [ ! -d $hack/i3 ];then
