@@ -1,7 +1,7 @@
 " ===============================================
 " base.vim --- Basic 
-" Copyright (c) 2021-20xx AyLax.Zhou
-" Author: AyLax.Zhou <zhoubye@foxmail.com>
+" Copyright (c) 2021-20xx aylax.dyn
+" Author: aylax.dyn <aylax.dyn@gmail.com>
 " ===============================================
 
 

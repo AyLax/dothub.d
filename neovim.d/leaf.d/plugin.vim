@@ -1,7 +1,7 @@
 " ===============================================
-" plugin.vim --- Hub 
-" Copyright (c) 2021-20xx AyLax.Zhou
-" Author: AyLax.Zhou <zhoubye@foxmail.com>
+" plugin.vim --- Plugin Hub 
+" Copyright (c) 2021-20xx aylax.dyn
+" Author: aylax.dyn <aylax.dyn@gmail.com>
 " ===============================================
 
 
