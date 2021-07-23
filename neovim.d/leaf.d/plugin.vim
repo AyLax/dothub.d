@@ -61,4 +61,5 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "snippets.d"]
 
 "" Fzf
 nnoremap <silent> <Leader>f :Files<CR>
+nnoremap <silent> <Leader>s :Lines<CR>
 nnoremap <silent> <Leader>b :Buffers<CR>
