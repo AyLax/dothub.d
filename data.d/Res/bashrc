@@ -15,10 +15,14 @@ eval "$(zoxide init bash)"
 export EDITOR="vim"
 export PATH="$HOME/.local/bin:$PATH"
 
+## Zxoide auto-jump
 export _ZO_ECHO=1
 export _ZO_MAXAGE=2048
 export _ZO_RESOLVE_SYMLINKS=1
 export _ZO_DATA_DIR="$HOME/.local/share/zoxide"
+
+## Fzf
+export FZF_DEFAULT_COMMAND='rg --files'
 
 
 # Rust Cargo
@@ -31,3 +35,5 @@ fi
 if [ -f "$HOME/.alias" ]; then
   . "$HOME/.alias"
 fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
