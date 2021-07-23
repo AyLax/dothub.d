@@ -46,6 +46,7 @@ let g:haskell_backpack = 1                " to enable highlighting of backpack k
 
 "" NERDTree
 nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <leader>r :NERDTreeRefreshRoot<CR>
 nnoremap <leader><space> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
