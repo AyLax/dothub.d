@@ -23,7 +23,10 @@ export _ZO_DATA_DIR="$HOME/.local/share/zoxide"
 
 ## Fzf
 export FZF_DEFAULT_COMMAND='rg --files'
-
+export FZF_DEFAULT_OPTS="\
+    --height 40% \
+    --layout=reverse \
+    --preview '(highlight -O ansi {} || cat {}) 2> /dev/null | head -500'"
 
 # Rust Cargo
 if [ -f "$HOME/.cargo/env" ]; then
