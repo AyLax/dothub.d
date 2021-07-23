@@ -1,7 +1,4 @@
 .
-├── .proj
-├── LICENSE
-├── README.md
 ├── data.d/
 │   ├── Bash/
 │   │   ├── arch.ins
@@ -10,20 +7,22 @@
 │   │   ├── linux.md
 │   │   └── webstar.md
 │   └── Res/
-│       ├── .alias
 │       ├── alacritty.yml
+│       ├── .alias
 │       ├── arch.pkg.list
 │       ├── bashrc
 │       ├── bg.jpeg
+│       ├── git-commit.template
 │       ├── i3-bar.toml
 │       ├── i3.conf
 │       ├── install.sh
 │       ├── picom.conf
 │       └── pkg.gen
 ├── font.d/
-│   ├── Monaco/
-│   │   └── Monaco.ttf
-│   └── install.sh
+│   ├── install.sh
+│   └── Monaco/
+│       └── Monaco.ttf
+├── LICENSE
 ├── neovim.d/
 │   ├── autoload/
 │   │   ├── .gitkeep
@@ -41,6 +40,8 @@
 │       ├── python.snippets
 │       ├── rust.snippets
 │       └── vim.snippets
-└── proj.gen
+├── .proj
+├── proj.gen
+└── README.md
 
-11 directories, 32 files
+11 directories, 33 files
