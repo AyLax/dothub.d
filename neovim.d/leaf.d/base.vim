@@ -40,22 +40,4 @@ set number                        " Show line number
 set showmatch                     " Highlight matched brackets
 set matchtime=1                   " Brackets highlight residence time
 
-" Sets status line
-set laststatus=2
-let sheader1 = "%#S1# \ %<%.50F %= \%*"
-let smarker1 = "%#S2# \ %y%m%r%h%w \%*"
-let smarker2 = "%#S3# \ [%{&ff}][%{&fenc}] \%*"
-let sfooter1 = "%#S4# \ (%l, %c) \%*"
-let sfooter2 = "%#S5# \ %3p%% \%*"
-let sheadera = sheader1
-let smarkera = smarker1.smarker2
-let sfootera = sfooter1.sfooter2
-let sformata = sheadera.smarkera.sfootera
-set statusline=%!sformata
-
-hi! link S1 Underlined
-hi! link S2 Statement
-hi! link S3 Title
-hi! link S4 Constant
-hi! link S5 Statement
 
