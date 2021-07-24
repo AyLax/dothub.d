@@ -1,4 +1,4 @@
-# type :: scope <-> subject
+# type :: scope <> subject
 
 
 # body:
@@ -25,4 +25,8 @@
 #
 # Foot: issues or change log
 #
+#
 # Tip: git config --global commit.template git-commit.template
+
+
+
