@@ -238,7 +238,8 @@ call s:hi('StatusLine', s:c, s:fg0, s:reverse)
 call s:hi('StatusLineNC', s:c2, s:fg1, s:reverse)
 " status lines of not-current windows
 
-call s:hi('LineNr', s:vlgray, s:c2) " s:c2 colors bg of line nr's
+call s:hi('LineNr', s:blue, s:none)
+" s:c2 colors bg of line nr's
 " line number for ":number" and ":#" commands, and when 'number'
 " or 'relativenumber' option is set
 
