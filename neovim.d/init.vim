@@ -12,4 +12,4 @@ runtime leaf.d/plugin.vim
 
 " Select color scheme
 let g:no_bg = 1
-colorscheme stargazer 
+colorscheme dyn

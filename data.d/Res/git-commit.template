@@ -1,33 +1,28 @@
+# type :: scope <-> subject
+
+
+# body:
 
 
 
+# foot:
 
 
 
-
-
-
-# <type>:(scope) <subject>
-
-## <body>
-
-## <footer>
-
-# types:
-#    feat:     new feature
-#    fix:      fix bug
-#    doc:      document
-#    style:    format code
-#    refactor: refactor code
-#    test:     spec
-# scopes:
-#    scopes of change    
-# subject:
-#    desc for commit (less than 50 chars)
-# Body: 
-#    detail desc
-# Footer: 
-#    issues or change log
+# Type:
+#  - fix  fix bug
+#  - doc  doc & res
+#  - tsu  test case
+#  - new  new feature
+#  - fmt  format code
+#  - rat  do refactor 
 #
+# Scope: effect scope    
 #
-# tip: git config --global commit.template git-commit.template
+# Subject: commit message
+#
+# Body: detailed description 
+#
+# Foot: issues or change log
+#
+# Tip: git config --global commit.template git-commit.template
