@@ -28,7 +28,7 @@
 │   │   ├── .gitkeep
 │   │   └── plug.vim
 │   ├── colors/
-│   │   └── stargazer.vim
+│   │   └── dyn.vim
 │   ├── init.vim
 │   ├── install.sh
 │   ├── leaf.d/
