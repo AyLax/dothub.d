@@ -94,3 +94,6 @@
 ## 在线修图
 [Photo Kit](https://photokit.com/editor/?lang=zh)
 
+
+## 学术期刊查阅
+[Academic](https://academic-accelerator.com/)
