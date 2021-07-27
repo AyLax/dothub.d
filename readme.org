@@ -1,0 +1,21 @@
+#+title: aylax's dotfiles [deprecated]
+#+email: zhoubye@foxmail.com
+#+author: aylax zhou
+#+language: en
+#+keywords: git readme dotfiles
+
+The repo used to customize dotfiles, now deprecated.
+
+** install
+#+begin_src sh
+git clone https://github.com/aylax/dothub.d.git
+#+end_src
+
+** usage
+Now is deprecated, only for read.
+
+** refs & thanks
+- [[https://github.com/RichardLitt/standard-readme.git][standard readme]]
+
+** license
+GPL-3.0 © aylax
