@@ -12,7 +12,7 @@
 # Type:
 #  - fix  fix bug
 #  - doc  doc & res
-#  - tsu  test case
+#  - coq  test case
 #  - new  new feature
 #  - fmt  format code
 #  - rat  do refactor 
