@@ -3,7 +3,7 @@
 # Only for ArchLinux-5.11.16+ [MBR] or [EFI]
 
 # ========================= install ========================== #
-# 1.step: check boot way
+# 1.step: check boot 
 # check boot: if dictionary exists; then efi else maybe mbr
 ls /sys/firmware/efi/efivars
 
