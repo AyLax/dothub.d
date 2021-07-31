@@ -350,7 +350,7 @@ endif
 " }}}
 
 
-" VimStatusLine: {{{
+" Vim Status Line: {{{
 let sheader1 = "%#S1# \ %<%.50F %= \%*"
 let smarker1 = "%#S2# \ %y%m%r%h%w \%*"
 let smarker2 = "%#S3# \ [%{&ff}][%{&fenc}] \%*"
@@ -361,14 +361,13 @@ let smarkera = smarker1.smarker2
 let sfootera = sfooter1.sfooter2
 let sformata = sheadera.smarkera.sfootera
 
-set laststatus=2
-set statusline=%!sformata
-
 call s:hi('S1', s:purple)
 call s:hi('S2', s:green)
 call s:hi('S3', s:orange)
 call s:hi('S4', s:blue)
 call s:hi('S5', s:green)
+
+set statusline=%!sformata
 " }}}
 
 
