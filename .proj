@@ -1,30 +1,28 @@
 .
-├── .proj
-├── LICENSE
-├── README.md
 ├── data.d/
 │   ├── Bash/
 │   │   ├── fix-git-history.doc
 │   │   └── make-arch-os.doc
 │   ├── Doc/
+│   │   ├── arch.pkg.list
 │   │   ├── linux-hotkey.md
+│   │   ├── pkg.gen
 │   │   └── webstar-page.md
 │   └── Res/
-│       ├── .alias
 │       ├── alacritty.yml
-│       ├── arch.pkg.list
+│       ├── .alias
 │       ├── bashrc
 │       ├── bg.jpeg
 │       ├── git-commit.template
 │       ├── i3-bar.toml
 │       ├── i3.conf
 │       ├── install.sh
-│       ├── picom.conf
-│       └── pkg.gen
+│       └── picom.conf
 ├── font.d/
-│   ├── Monaco/
-│   │   └── Monaco.ttf
-│   └── install.sh
+│   ├── install.sh
+│   └── Monaco/
+│       └── Monaco.ttf
+├── LICENSE
 ├── neovim.d/
 │   ├── autoload/
 │   │   ├── .gitkeep
@@ -43,6 +41,8 @@
 │       ├── python.snippets
 │       ├── rust.snippets
 │       └── vim.snippets
-└── proj.gen
+├── .proj
+├── proj.gen
+└── README.md
 
 11 directories, 34 files

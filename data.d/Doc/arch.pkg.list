@@ -20,10 +20,11 @@ fcitx5-material-color 0.2.1-1
 fcitx5-qt 5.0.6-1
 fcitx5-rime 5.0.6-1
 fd 8.2.1-1
-feh 3.7-1
+feh 3.7.1-1
 file 5.40-5
 findutils 4.8.0-1
 flex 2.6.4-3
+fuse2 2.9.9-4
 fzf 0.27.2-1
 gawk 5.1.0-1
 gcc 11.1.0-1
@@ -38,10 +39,10 @@ i3-gaps 4.19.1-1
 i3status-rust 0.20.2-1
 iwd 1.15-1
 libtool 2.4.6+42+gb88cebd5-16
-linux 5.13.4.arch1-1
+linux 5.13.5.arch1-1
 linux-firmware 20210716.b7c134f-1
 lld 12.0.1-1
-llvm 12.0.1-1
+llvm 12.0.1-2
 m4 1.4.19-1
 make 4.3-3
 man-db 2.9.4-2
@@ -49,7 +50,7 @@ neovim 0.5.0-1
 nodejs 16.5.0-1
 noto-fonts-cjk 20201206-2
 noto-fonts-emoji 20210625-1
-npm 7.19.0-1
+npm 7.20.2-1
 openssh 8.6p1-1
 pacman 6.0.0-5
 patch 2.7.6-8
@@ -60,10 +61,10 @@ pulseaudio-alsa 1:1.2.5-2
 ranger 1.9.3-3
 ripgrep 13.0.0-2
 rofi 1.6.1-1
-scrot 1.5-1
+scrot 1.6-1
 sed 4.8-1
 stack 2.7.1-1
-sudo 1.9.7.p1-1
+sudo 1.9.7.p2-1
 texinfo 6.8-1
 tokei 12.1.2-1
 tree 1.8.0-2
