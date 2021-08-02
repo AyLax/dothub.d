@@ -1,6 +1,16 @@
+#!/bin/bash
 # Alias
 
-#alias ls='ls --color=auto'
+
+if [[ `uname` == 'Darwin' ]]; then
+  alias ls='ls'
+fi
+
+
+if [[ `uname` == 'Linux' ]]; then
+  alias ls='ls --color=auto'
+fi
+
 alias ll='ls -l'
 alias la='ls -la'
 alias grep='grep --color=auto'
