@@ -97,3 +97,10 @@
 
 ## 学术期刊查阅
 [Academic](https://academic-accelerator.com/)
+
+
+## 语义化版本
+[Semantic Versioning](https://semver.org/lang/zh-CN/)
+
+
+
