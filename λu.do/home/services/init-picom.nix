@@ -1,0 +1,6 @@
+# services :: picom
+
+{ config, pkgs, ... }:
+
+{
+}
