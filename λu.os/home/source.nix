@@ -2,10 +2,11 @@
 { config, pkgs, libs, ... }:
 {
   home.packages = with pkgs; [
-    ripgrep       # fast grep
+    alacritty     # termimal (Rust)
     fzf           # fuzzy finder
+    ripgrep       # fast grep
+    tree          # list as tree-like format
     zoxide        # auto jump
     zsh           # alternative for bash
-    tree          # list as tree-like format
   ];
 }

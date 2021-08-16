@@ -9,6 +9,7 @@
     ./programs/init-zsh.nix
     ./programs/init-fzf.nix
     ./programs/init-zoxide.nix
+    ./programs/init-alacritty.nix
   ];
 
   # Home Manager needs a bit of information about you and the

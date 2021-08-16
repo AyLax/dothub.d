@@ -5,14 +5,16 @@
 {
   programs.alacritty = {
     enable = true;
-
     settings = {
+      font = {
+        size = 16.0;
+      };
       colors = {
         primary = {
           background = "#2b2836";
           foreground = "#ffffff";
         };
-
+        
         cursor = {
           text = "#111111";
           cursor = "#ff2800";
@@ -81,7 +83,7 @@
       };
 
       bell = {
-        animation = EaseOutExpo;
+        animation = "EaseOutExpo";
         duration = 0;
         color = "#ffffff";
       };
@@ -89,13 +91,13 @@
       background_opacity = 0.64;
 
       selection = {
-        semantic_escape_chars: ",│`|:\"' ()[]{}<>\t";
-        save_to_clipboard: true;
+        semantic_escape_chars = ",│`|:\"' ()[]{}<>\t";
+        save_to_clipboard = true;
       };
 
       cursor = {
-        style.shape = Block;
-        style.blinking = Always;
+        style.shape = "Block";
+        style.blinking = "Always";
         blink_interval = 480;
       };
     };
