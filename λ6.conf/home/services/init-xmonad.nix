@@ -1,0 +1,5 @@
+# services :: xmonad
+{ config, pkgs, ... }:
+
+{
+}
