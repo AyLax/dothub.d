@@ -1,8 +1,9 @@
-# programs :: zsh
+# programs :: zoxide
+
 { config, pkgs, ... }:
 
 {
-  programs.zsh = {
+  programs.zoxide = {
     enable = true;
   };
 }
