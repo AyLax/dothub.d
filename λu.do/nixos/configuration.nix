@@ -10,6 +10,8 @@
       ./hardware-configuration.nix
     ];
 
+  nix.binaryCaches = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -66,9 +68,9 @@
   # Nix package manager.
   nix = {
     package = pkgs.nixFlakes;
-    # extraOptions = '' 
-    #   experimental-features = nix-command flakes
-    # '';
+    extraOptions = '' 
+      experimental-features = nix-command flakes
+    '';
     maxJobs = lib.mkDefault 24;
     autoOptimiseStore = true;
     trustedUsers = [ "root" "aylax" "@wheel" ];
