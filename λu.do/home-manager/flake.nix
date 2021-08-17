@@ -47,7 +47,7 @@
                 # ./modules/programs/init-fzf.nix
                 # ./modules/programs/init-emacs.nix
                 # ./modules/programs/init-zoxide.nix
-                # ./modules/programs/init-alacritty.nix
+                ./modules/programs/init-alacritty.nix
             ];
           };
           system = "x86_64-darwin";
