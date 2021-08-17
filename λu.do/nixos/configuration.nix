@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./window/window-manager.nix
     ];
 
   nix.binaryCaches = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
@@ -89,35 +90,6 @@
 
   # Allow Unfree packages
   nixpkgs.config.allowUnfree = true;
-
-
-  # X11 Windows
-  
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Configure keymap in X11
-  services.xserver.layout = "us";
-  services.xserver.xkbOptions = "eurosign:e";
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  services.xserver.libinput.enable = true;
-  
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
-  services.xserver.screenSection = ''
-    Option "NoFlip" "true"
-  '';
-
-  
-  services.xserver.displayManager.sddm = {
-    enable = true;
-    enableHidpi = true;
-  };
-
-  services.xserver.desktopManager.plasma5.enable = true;
-  
 
 
  
