@@ -9,7 +9,6 @@
 
     displayManager.sddm = {
       enable = true;
-      };
     };
 
     xkbOptions = "terminate:ctrl_alt_bksp,caps:ctrl_modifier";
