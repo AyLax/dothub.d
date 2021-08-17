@@ -31,23 +31,23 @@
     in
     inputs.flake-utils.lib.eachDefaultSystem (system: {
       legacyPackages = inputs.nixpkgs.legacyPackages.${system};
-    }) 
-    {
+    }) // {
       homeConfigurations = {
         # for darwin
         macos-book = inputs.home-manager.lib.homeManagerConfiguration {
-          configuration = { config, pkgs, ... }:{
+          configuration = { config, pkgs, ... }:
+	  {
             nixpkgs.overlays = overlays;
             nixpkgs.config = import ./modules/config.nix;
             xdg.configFile."nix/nix.conf".source = ./assets/configs/nix-mirror.conf;
             imports = [
                 ./modules/source.nix
                 ./modules/home-manager.nix
-                ./modules/programs/init-zsh.nix
-                ./modules/programs/init-fzf.nix
-                ./modules/programs/init-emacs.nix
-                ./modules/programs/init-zoxide.nix
-                ./modules/programs/init-alacritty.nix
+                # ./modules/programs/init-zsh.nix
+                # ./modules/programs/init-fzf.nix
+                # ./modules/programs/init-emacs.nix
+                # ./modules/programs/init-zoxide.nix
+                # ./modules/programs/init-alacritty.nix
             ];
           };
           system = "x86_64-darwin";
@@ -57,11 +57,13 @@
 
         # for nixos
         nixos-book = inputs.home-manager.lib.homeManagerConfiguration {
-          configuration = { config, pkgs, ... }: {
+          configuration = { config, pkgs, ... }:
+	  {
             nixpkgs.overlays = overlays;
             nixpkgs.config = import ./modules/config.nix;
             xdg.configFile."nix/nix.conf".source = ./assets/configs/nix-mirror.conf;
             imports = [
+	      ./mudules/source.nix
               ./modules/home-manager.nix
             ];
           };

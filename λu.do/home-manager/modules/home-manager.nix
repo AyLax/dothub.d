@@ -10,5 +10,5 @@
     # NIX_PATH = "nixpkgs=$HOME/dothub.d/λu.do/home-manager/compat";
   };
 
-  home.stateVersion = "21.11";
+  home.stateVersion = "20.09";
 }
