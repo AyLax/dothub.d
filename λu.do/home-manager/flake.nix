@@ -5,29 +5,29 @@
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
   inputs.flake-utils.url = "github:numtide/flake-utils";
 
-  inputs.emacs-overlay = {
-    type = "github";
-    owner = "nix-community";
-    repo = "emacs-overlay";
-    ref = "master";
-    rev = "c2aa7457ac69ab851c57e1fbd7660f131f343ea0";
-  };
+#  inputs.emacs-overlay = {
+#    type = "github";
+#    owner = "nix-community";
+#    repo = "emacs-overlay";
+#    ref = "master";
+#    rev = "c2aa7457ac69ab851c57e1fbd7660f131f343ea0";
+#  };
 
   inputs.home-manager = {
     url = "github:nix-community/home-manager";
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
- inputs.LS_COLORS = {
-   url = "github:trapd00r/LS_COLORS";
-   flake = false;
- };
+# inputs.LS_COLORS = {
+#   url = "github:trapd00r/LS_COLORS";
+#   flake = false;
+# };
 
   outputs = { self, ... }@inputs:
     let
       overlays = [
-        inputs.emacs-overlay.overlay
-        (final: prev: { LS_COLORS = inputs.LS_COLORS; })
+#        inputs.emacs-overlay.overlay
+#        (final: prev: { LS_COLORS = inputs.LS_COLORS; })
       ];
     in
     inputs.flake-utils.lib.eachDefaultSystem (system: {
