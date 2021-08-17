@@ -7,7 +7,7 @@
   home.extraOutputsToInstall = [ "man" ];
 
   home.sessionVariables = {
-    NIX_PATH = "nixpkgs=$HOME/.local/nix/home-manager/compat";
+    # NIX_PATH = "nixpkgs=$HOME/dothub.d/λu.do/home-manager/compat";
   };
 
   home.stateVersion = "21.11";

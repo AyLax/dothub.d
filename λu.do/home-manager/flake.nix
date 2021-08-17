@@ -33,21 +33,21 @@
       legacyPackages = inputs.nixpkgs.legacyPackages.${system};
     }) 
     {
-      home-configurations = {
+      homeConfigurations = {
         # for darwin
         macos-book = inputs.home-manager.lib.homeManagerConfiguration {
           configuration = { config, pkgs, ... }:{
             nixpkgs.overlays = overlays;
-            nixpkgs.config = import ./config.nix;
+            nixpkgs.config = import ./modules/config.nix;
             xdg.configFile."nix/nix.conf".source = ./assets/configs/nix-mirror.conf;
             imports = [
-                ./home.nix
-                ./source.nix
-                ./programs/init-zsh.nix
-                ./programs/init-fzf.nix
-                ./programs/init-emacs.nix
-                ./programs/init-zoxide.nix
-                ./programs/init-alacritty.nix
+                ./modules/source.nix
+                ./modules/home-manager.nix
+                ./modules/programs/init-zsh.nix
+                ./modules/programs/init-fzf.nix
+                ./modules/programs/init-emacs.nix
+                ./modules/programs/init-zoxide.nix
+                ./modules/programs/init-alacritty.nix
             ];
           };
           system = "x86_64-darwin";
@@ -59,10 +59,10 @@
         nixos-book = inputs.home-manager.lib.homeManagerConfiguration {
           configuration = { config, pkgs, ... }: {
             nixpkgs.overlays = overlays;
-            nixpkgs.config = import ./config.nix;
+            nixpkgs.config = import ./modules/config.nix;
             xdg.configFile."nix/nix.conf".source = ./assets/configs/nix-mirror.conf;
             imports = [
-              ./home.nix
+              ./modules/home-manager.nix
             ];
           };
           system = "x86_64-linux";
@@ -71,7 +71,7 @@
        };
      };
 
-     macos-book = self.home-configurations.macos-book.activationPackage;
-     nixos-book = self.home-configurations.nixos-book.activationPackage;
+     macos-book = self.homeConfigurations.macos-book.activationPackage;
+     nixos-book = self.homeConfigurations.nixos-book.activationPackage;
    };
 }
