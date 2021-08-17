@@ -3,7 +3,8 @@
 
 {
   programs.rofi = {
-    enable = true;
-
+    enable = false;
+    terminal = "${pkgs.alacritty}/bin/alacritty";
+    theme = ../../assets/configs/rofi/config.rasi;
   };
 }
