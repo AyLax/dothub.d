@@ -11,13 +11,7 @@
       enable = true;
     };
 
-    xkbOptions = "terminate:ctrl_alt_bksp,caps:ctrl_modifier";
     desktopManager.plasma5.enable = true;
 
-  };
-
-  i18n.inputMethod = {
-    enabled = "fcitx";
-    fcitx.engines = with pkgs.fcitx-engines; [ libpinyin rime mozc ];
   };
 }
