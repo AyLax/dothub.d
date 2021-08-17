@@ -77,7 +77,7 @@
     trustedUsers = [ "root" "aylax" "@wheel" ];
  
     # Set nixpkgs channel to follow flake
-    nixPath = lib.mkForce [ "nixpkgs=/etc/self/nixos/compat" ];
+    nixPath = lib.mkForce [ "nixpkgs=/etc/self/compat" ];
     registry.nixpkgs.flake = inputs.nixpkgs;
   };
 

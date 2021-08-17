@@ -63,8 +63,11 @@
             nixpkgs.config = import ./modules/config.nix;
             xdg.configFile."nix/nix.conf".source = ./assets/configs/nix-mirror.conf;
             imports = [
-	      ./mudules/source.nix
+	      ./modules/source.nix
               ./modules/home-manager.nix
+              ./modules/programs/init-fzf.nix
+              ./modules/programs/init-zoxide.nix
+	      ./modules/programs/init-alacritty.nix
             ];
           };
           system = "x86_64-linux";
