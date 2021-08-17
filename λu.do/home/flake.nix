@@ -35,10 +35,9 @@
     {
       home-configurations = {
         # for darwin
-        home-manager-lib = inputs.home-manager.lib.homeManagerConfiguration;
-        macos-book = home-manager-lib {
+        macos-book = inputs.home-manager.lib.homeManagerConfiguration {
           configuration = { config, pkgs, ... }:{
-            nixpkgs.overlays = verlays;
+            nixpkgs.overlays = overlays;
             nixpkgs.config = import ./config.nix;
             xdg.configFile."nix/nix.conf".source = ./assets/configs/nix-mirror.conf;
             imports = [
@@ -57,7 +56,7 @@
         };
 
         # for nixos
-        nixos-book = home-manager-lib {
+        nixos-book = inputs.home-manager.lib.homeManagerConfiguration {
           configuration = { config, pkgs, ... }: {
             nixpkgs.overlays = overlays;
             nixpkgs.config = import ./config.nix;
