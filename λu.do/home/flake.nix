@@ -31,11 +31,11 @@
     in
     inputs.flake-utils.lib.eachDefaultSystem (system: {
       legacyPackages = inputs.nixpkgs.legacyPackages.${system};
-      home-manager-lib = inputs.home-manager.lib.homeManagerConfiguration;
     }) 
     {
       home-configurations = {
         # for darwin
+        home-manager-lib = inputs.home-manager.lib.homeManagerConfiguration;
         macos-book = home-manager-lib {
           configuration = { config, pkgs, ... }:{
             nixpkgs.overlays = verlays;
@@ -72,7 +72,7 @@
        };
      };
 
-     macos-book = self.homeConfigurations.macos-book.activationPackage;
-     nixos-book = self.homeConfigurations.nixos-book.activationPackage;
+     macos-book = self.home-configurations.macos-book.activationPackage;
+     nixos-book = self.home-configurations.nixos-book.activationPackage;
    };
 }
