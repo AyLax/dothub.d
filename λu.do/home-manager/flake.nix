@@ -7,9 +7,10 @@
 
   inputs.emacs-overlay = {
     type = "github";
-    owner = "mjlbach";
+    owner = "nix-community";
     repo = "emacs-overlay";
-    ref = "feature/flakes";
+    ref = "master";
+    rev = "c2aa7457ac69ab851c57e1fbd7660f131f343ea0";
   };
 
   inputs.home-manager = {
@@ -17,10 +18,10 @@
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  inputs.LS_COLORS = {
-    url = "github:trapd00r/LS_COLORS";
-    flake = false;
-  };
+ inputs.LS_COLORS = {
+   url = "github:trapd00r/LS_COLORS";
+   flake = false;
+ };
 
   outputs = { self, ... }@inputs:
     let
