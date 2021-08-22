@@ -103,4 +103,18 @@
 [Semantic Versioning](https://semver.org/lang/zh-CN/)
 
 
+## APL
+`:) The command to exit the APL-Interp: )OFF`
 
+[GNU APL Introduction](https://www.gnu.org/software/apl/apl.html#Command-Line-Options)
+[APL Wiki](https://www.aplwiki.com/)
+[APL In Emacs](https://fourier.github.io/apl/emacs/2018/01/20/gnu-apl.html)
+[APL PlayGround Online](https://tryapl.org/)
+
+## Color Theme
+[Rose Pine](https://github.com/rose-pine/rose-pine-theme)
+
+## Nix & NixOS
+[Nix Search Packages](https://search.nixos.org/packages)
+[Nix Home-Manager Supported Options](https://nix-community.github.io/home-manager/options.html)
+[Nix Home-Manager Guide](https://nix-community.github.io/home-manager/)
