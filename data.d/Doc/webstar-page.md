@@ -3,6 +3,7 @@
 
 ## Emacs
 [diy emacs color-theme](https://emacsfodder.github.io/emacs-theme-editor/)
+[Org Mode Use Guide](http://doc.norang.ca/org-mode.html)
 
 
 ## ArchLinux 
