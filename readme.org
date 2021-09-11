@@ -1,14 +1,14 @@
-#+title: aylax's dotfiles [deprecated]
+#+title: aylax's dotnotes [deprecated]
 #+email: zhoubye@foxmail.com
 #+author: aylax zhou
 #+language: en
-#+keywords: git readme dotfiles
+#+keywords: git readme archive
 
-The repo used to customize dotfiles, now deprecated.
+The repo used to record dotnotes, now deprecated.
 
 ** install
 #+begin_src sh
-git clone https://github.com/aylax/dothub.d.git
+git clone https://github.com/aylax/archive.dotnotes.git
 #+end_src
 
 ** usage
