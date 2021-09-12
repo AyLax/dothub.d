@@ -1,6 +1,6 @@
 #!/bin/bash
 
-path="$HOME/dothub.d/data.d/Res"
+path="$HOME/archive.dotnotes/assets"
 hack="$HOME/.config"
 
 # bashrc
@@ -12,7 +12,6 @@ if [ ! -d $hack/i3 ];then
     mkdir -p $hack/i3
     ln -sf $path/i3.conf $hack/i3/config
     ln -sf $path/i3-bar.toml $hack/i3/status.toml
-    ln -sf $path/bg.jpeg $hack/i3/bg.jpeg
 fi
 
 # alacritty terminal
