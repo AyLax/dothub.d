@@ -329,13 +329,13 @@ pacman -S fcitx5-material-color
 
 vim ~/.config/fcitx5/conf/classicui.conf
 # ===============================
-# 垂直候选
+# vertical
 Vertical Candidate List=False
-# 按屏幕 DPI 使用
+# screen dpi
 PerScreenDPI=True
-# Font (设置成你喜欢的字体)
+# Font
 Font="Noto Sans Mono CJK SC Regular 12"
-# 主题
+# themes
 Theme=Material-Color-DeepPurple
 # ===============================
 
