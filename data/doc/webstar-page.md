@@ -120,3 +120,4 @@
 [Nix Search Packages](https://search.nixos.org/packages)
 [Nix Home-Manager Supported Options](https://nix-community.github.io/home-manager/options.html)
 [Nix Home-Manager Guide](https://nix-community.github.io/home-manager/)
+[How to Learn Nix](https://ianthehenry.com/posts/how-to-learn-nix/introduction/)
