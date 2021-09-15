@@ -75,6 +75,8 @@
 
 [Write Scheme by Haskell](https://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours/First_Steps)
 
+[Haskell Packages](https://hackage.haskell.org/package/hakyll)
+[Haskell Laziness](https://hackage.haskell.org/package/hakyll)
 
 ## Data Structure
 [Conflict-free replicated data](https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type)
