@@ -123,3 +123,5 @@
 [Nix Home-Manager Supported Options](https://nix-community.github.io/home-manager/options.html)
 [Nix Home-Manager Guide](https://nix-community.github.io/home-manager/)
 [How to Learn Nix](https://ianthehenry.com/posts/how-to-learn-nix/introduction/)
+[Nix Unstable Manual](https://nixos.org/manual/nix/unstable/introduction.html)
+[Set GPG in Nix](https://rzetterberg.github.io/yubikey-gpg-nixos.html)
