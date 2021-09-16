@@ -9,8 +9,12 @@
 
 ## ArchLinux 
 
-### => sudo pacman -U https://archive.archlinux.org/packages/$pkgname-pfx/$pkgname/$pkgname.tar.zst
+### 手动安装指定版本包
 [ArchLinux Archive Repo](https://archive.archlinux.org/packages/)
+
+```sh
+sudo pacman -U https://archive.archlinux.org/packages/$pkgname-pfx/$pkgname/$pkgname.tar.zst
+```
 
 
 ## Zcore
