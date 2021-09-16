@@ -111,8 +111,11 @@
 `:) The command to exit the APL-Interp: )OFF`
 
 [GNU APL Introduction](https://www.gnu.org/software/apl/apl.html#Command-Line-Options)
+
 [APL Wiki](https://www.aplwiki.com/)
+
 [APL In Emacs](https://fourier.github.io/apl/emacs/2018/01/20/gnu-apl.html)
+
 [APL PlayGround Online](https://tryapl.org/)
 
 ## Color Theme
@@ -120,8 +123,13 @@
 
 ## Nix & NixOS
 [Nix Search Packages](https://search.nixos.org/packages)
+
 [Nix Home-Manager Supported Options](https://nix-community.github.io/home-manager/options.html)
+
 [Nix Home-Manager Guide](https://nix-community.github.io/home-manager/)
+
 [How to Learn Nix](https://ianthehenry.com/posts/how-to-learn-nix/introduction/)
+
 [Nix Unstable Manual](https://nixos.org/manual/nix/unstable/introduction.html)
+
 [Set GPG in Nix](https://rzetterberg.github.io/yubikey-gpg-nixos.html)
