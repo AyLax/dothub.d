@@ -147,3 +147,5 @@ sudo pacman -U https://archive.archlinux.org/packages/$pkgname-pfx/$pkgname/$pkg
 [Tokio Axum](https://tokio.rs/blog/2021-07-announcing-axum)
 
 [wikipedia](https://www.wikipedia.org/)
+
+[gwern wiki-like website](https://www.gwern.net/Links)
