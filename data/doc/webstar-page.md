@@ -149,3 +149,7 @@ sudo pacman -U https://archive.archlinux.org/packages/$pkgname-pfx/$pkgname/$pkg
 [wikipedia](https://www.wikipedia.org/)
 
 [gwern wiki-like website](https://www.gwern.net/Links)
+
+
+## 游戏设计文献
+[游戏编程模式](https://gpp.tkchu.me/)
