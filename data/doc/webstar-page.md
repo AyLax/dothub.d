@@ -1,5 +1,7 @@
 # Useful web page i starred
 
+## Language Guide
+[language guides](https://devdocs.io/help)
 
 ## Emacs
 [diy emacs color-theme](https://emacsfodder.github.io/emacs-theme-editor/)
@@ -153,3 +155,5 @@ sudo pacman -U https://archive.archlinux.org/packages/$pkgname-pfx/$pkgname/$pkg
 
 ## 游戏设计文献
 [游戏编程模式](https://gpp.tkchu.me/)
+
+[Bevy 指南](https://bevy-cheatbook.github.io/cheatsheet.html)
